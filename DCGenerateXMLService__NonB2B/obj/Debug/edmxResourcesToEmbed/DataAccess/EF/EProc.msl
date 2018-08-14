@@ -1,0 +1,1884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eprocurementModelStoreContainer" CdmEntityContainer="eprocEntities">
+    <EntitySetMapping Name="Company_Code">
+      <EntityTypeMapping TypeName="eprocurementModel.Company_Code">
+        <MappingFragment StoreEntitySet="Company_Code">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="initial" ColumnName="initial" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_DOWNLOAD_TRANSACTION">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_DOWNLOAD_TRANSACTION">
+        <MappingFragment StoreEntitySet="CUSTOM_DOWNLOAD_TRANSACTION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Acknowledge" ColumnName="Acknowledge" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="CreatedWho" ColumnName="CreatedWho" />
+          <ScalarProperty Name="CreatedWhen" ColumnName="CreatedWhen" />
+          <ScalarProperty Name="ChangedWho" ColumnName="ChangedWho" />
+          <ScalarProperty Name="ChangedWhen" ColumnName="ChangedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_DOWNLOAD_TRANSACTIONDATA">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_DOWNLOAD_TRANSACTIONDATA">
+        <MappingFragment StoreEntitySet="CUSTOM_DOWNLOAD_TRANSACTIONDATA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="AIID" ColumnName="AIID" />
+          <ScalarProperty Name="TransGUID" ColumnName="TransGUID" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="DestinationUser" ColumnName="DestinationUser" />
+          <ScalarProperty Name="Key1" ColumnName="Key1" />
+          <ScalarProperty Name="Key2" ColumnName="Key2" />
+          <ScalarProperty Name="Key3" ColumnName="Key3" />
+          <ScalarProperty Name="DataLength" ColumnName="DataLength" />
+          <ScalarProperty Name="TransStatus" ColumnName="TransStatus" />
+          <ScalarProperty Name="LogMessage" ColumnName="LogMessage" />
+          <ScalarProperty Name="CreatedWho" ColumnName="CreatedWho" />
+          <ScalarProperty Name="CreatedWhen" ColumnName="CreatedWhen" />
+          <ScalarProperty Name="ChangedWho" ColumnName="ChangedWho" />
+          <ScalarProperty Name="ChangedWhen" ColumnName="ChangedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_DOWNLOAD_TRANSACTIONDATADETAIL">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_DOWNLOAD_TRANSACTIONDATADETAIL">
+        <MappingFragment StoreEntitySet="CUSTOM_DOWNLOAD_TRANSACTIONDATADETAIL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_LOG">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_LOG">
+        <MappingFragment StoreEntitySet="CUSTOM_LOG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WebServiceName" ColumnName="WebServiceName" />
+          <ScalarProperty Name="MethodName" ColumnName="MethodName" />
+          <ScalarProperty Name="Acknowledge" ColumnName="Acknowledge" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="CreatedWho" ColumnName="CreatedWho" />
+          <ScalarProperty Name="CreatedWhen" ColumnName="CreatedWhen" />
+          <ScalarProperty Name="ChangedWho" ColumnName="ChangedWho" />
+          <ScalarProperty Name="ChangedWhen" ColumnName="ChangedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02001_HS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02001_HS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02001_HS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="MaterialNumberSERA" ColumnName="MaterialNumberSERA" />
+          <ScalarProperty Name="MaterialDescriptionSERA" ColumnName="MaterialDescriptionSERA" />
+          <ScalarProperty Name="MaterialNumberAI" ColumnName="MaterialNumberAI" />
+          <ScalarProperty Name="ColorDescSERA" ColumnName="ColorDescSERA" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="NamaKaroseri" ColumnName="NamaKaroseri" />
+          <ScalarProperty Name="AlamatKaroseri" ColumnName="AlamatKaroseri" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="NoTelepon" ColumnName="NoTelepon" />
+          <ScalarProperty Name="BentukKaroseri" ColumnName="BentukKaroseri" />
+          <ScalarProperty Name="InfoPromiseDelivery" ColumnName="InfoPromiseDelivery" />
+          <ScalarProperty Name="CustomerSTNKName" ColumnName="CustomerSTNKName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="KTPTDP" ColumnName="KTPTDP" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="PartnerAddress" ColumnName="PartnerAddress" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+          <ScalarProperty Name="PartnerPostalCode" ColumnName="PartnerPostalCode" />
+          <ScalarProperty Name="Diskon" ColumnName="Diskon" />
+          <ScalarProperty Name="Pricing" ColumnName="Pricing" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="Address5" ColumnName="Address5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02001_IS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02001_IS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02001_IS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="AccessoriesNumberAI" ColumnName="AccessoriesNumberAI" />
+          <ScalarProperty Name="AccessoriesNumberSERA" ColumnName="AccessoriesNumberSERA" />
+          <ScalarProperty Name="AccessoriesDescriptionSERA" ColumnName="AccessoriesDescriptionSERA" />
+          <ScalarProperty Name="QtyAccessories" ColumnName="QtyAccessories" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02001_TEMP_HS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02001_TEMP_HS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02001_TEMP_HS">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="MaterialNumberSERA" ColumnName="MaterialNumberSERA" />
+          <ScalarProperty Name="MaterialDescriptionSERA" ColumnName="MaterialDescriptionSERA" />
+          <ScalarProperty Name="MaterialNumberAI" ColumnName="MaterialNumberAI" />
+          <ScalarProperty Name="ColorDescSERA" ColumnName="ColorDescSERA" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="NamaKaroseri" ColumnName="NamaKaroseri" />
+          <ScalarProperty Name="AlamatKaroseri" ColumnName="AlamatKaroseri" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="NoTelepon" ColumnName="NoTelepon" />
+          <ScalarProperty Name="BentukKaroseri" ColumnName="BentukKaroseri" />
+          <ScalarProperty Name="InfoPromiseDelivery" ColumnName="InfoPromiseDelivery" />
+          <ScalarProperty Name="CustomerSTNKName" ColumnName="CustomerSTNKName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="KTPTDP" ColumnName="KTPTDP" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="PartnerAddress" ColumnName="PartnerAddress" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+          <ScalarProperty Name="PartnerPostalCode" ColumnName="PartnerPostalCode" />
+          <ScalarProperty Name="Diskon" ColumnName="Diskon" />
+          <ScalarProperty Name="Pricing" ColumnName="Pricing" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="Address5" ColumnName="Address5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02001_TEMP_IS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02001_TEMP_IS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02001_TEMP_IS">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="AccessoriesNumberAI" ColumnName="AccessoriesNumberAI" />
+          <ScalarProperty Name="AccessoriesNumberSERA" ColumnName="AccessoriesNumberSERA" />
+          <ScalarProperty Name="AccessoriesDescriptionSERA" ColumnName="AccessoriesDescriptionSERA" />
+          <ScalarProperty Name="QtyAccessories" ColumnName="QtyAccessories" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02002">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02002">
+        <MappingFragment StoreEntitySet="CUSTOM_S02002">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="StatusPOSERA" ColumnName="StatusPOSERA" />
+          <ScalarProperty Name="RejectRevisedPOSERA" ColumnName="RejectRevisedPOSERA" />
+          <ScalarProperty Name="DocumentNo" ColumnName="DocumentNo" />
+          <ScalarProperty Name="AIMaterialNumber" ColumnName="AIMaterialNumber" />
+          <ScalarProperty Name="SERAMaterialNumber" ColumnName="SERAMaterialNumber" />
+          <ScalarProperty Name="SERAMaterialDescription" ColumnName="SERAMaterialDescription" />
+          <ScalarProperty Name="AIColor" ColumnName="AIColor" />
+          <ScalarProperty Name="SERAColor" ColumnName="SERAColor" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="SalesOrderStatus" ColumnName="SalesOrderStatus" />
+          <ScalarProperty Name="DPPByVendor" ColumnName="DPPByVendor" />
+          <ScalarProperty Name="PPNByVendor" ColumnName="PPNByVendor" />
+          <ScalarProperty Name="BBNPriceByVendor" ColumnName="BBNPriceByVendor" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="MachineNumberByVendor" ColumnName="MachineNumberByVendor" />
+          <ScalarProperty Name="CBUCKD" ColumnName="CBUCKD" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="FactureDONumber" ColumnName="FactureDONumber" />
+          <ScalarProperty Name="BillingStatus" ColumnName="BillingStatus" />
+          <ScalarProperty Name="FactureDODate" ColumnName="FactureDODate" />
+          <ScalarProperty Name="NoFakturKendaraan" ColumnName="NoFakturKendaraan" />
+          <ScalarProperty Name="TanggalFakturKendaraan" ColumnName="TanggalFakturKendaraan" />
+          <ScalarProperty Name="CancellationReason" ColumnName="CancellationReason" />
+          <ScalarProperty Name="ActualDateDeliveryUnit" ColumnName="ActualDateDeliveryUnit" />
+          <ScalarProperty Name="BSTKBNo" ColumnName="BSTKBNo" />
+          <ScalarProperty Name="LicensePlateByVendor" ColumnName="LicensePlateByVendor" />
+          <ScalarProperty Name="STNKDateByVendor" ColumnName="STNKDateByVendor" />
+          <ScalarProperty Name="RevisiSTNK" ColumnName="RevisiSTNK" />
+          <ScalarProperty Name="NoSertifikat" ColumnName="NoSertifikat" />
+          <ScalarProperty Name="TglSertifikat" ColumnName="TglSertifikat" />
+          <ScalarProperty Name="NoFormulirA" ColumnName="NoFormulirA" />
+          <ScalarProperty Name="TglFormulirA" ColumnName="TglFormulirA" />
+          <ScalarProperty Name="NoSertifikatRegUjiTipe" ColumnName="NoSertifikatRegUjiTipe" />
+          <ScalarProperty Name="ActualDeliveryBPKBDate" ColumnName="ActualDeliveryBPKBDate" />
+          <ScalarProperty Name="NamaPenerima" ColumnName="NamaPenerima" />
+          <ScalarProperty Name="AlamatPenerima" ColumnName="AlamatPenerima" />
+          <ScalarProperty Name="BPKBNumber" ColumnName="BPKBNumber" />
+          <ScalarProperty Name="RemarksBPKB" ColumnName="RemarksBPKB" />
+          <ScalarProperty Name="RevisiBPKB" ColumnName="RevisiBPKB" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="xmlCreatedBy" ColumnName="xmlCreatedBy" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlModifiedBy" ColumnName="xmlModifiedBy" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02003">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02003">
+        <MappingFragment StoreEntitySet="CUSTOM_S02003">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSera" ColumnName="VersionPOSera" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="ReasonRejection" ColumnName="ReasonRejection" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02003_TEMP">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02003_TEMP">
+        <MappingFragment StoreEntitySet="CUSTOM_S02003_TEMP">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSera" ColumnName="VersionPOSera" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="ReasonRejection" ColumnName="ReasonRejection" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02004">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02004">
+        <MappingFragment StoreEntitySet="CUSTOM_S02004">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReasonRejection" ColumnName="ReasonRejection" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02005_HS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02005_HS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02005_HS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="GroupingCode" ColumnName="GroupingCode" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02005_IS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02005_IS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02005_IS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="GroupingCode" ColumnName="GroupingCode" />
+          <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="BillingNo" ColumnName="BillingNo" />
+          <ScalarProperty Name="KuitansiNo" ColumnName="KuitansiNo" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="BusinessAreaCode" ColumnName="BusinessAreaCode" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="SpesNumber" ColumnName="SpesNumber" />
+          <ScalarProperty Name="SONumber" ColumnName="SONumber" />
+          <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+          <ScalarProperty Name="ChasisNumber" ColumnName="ChasisNumber" />
+          <ScalarProperty Name="PONumberSERA" ColumnName="PONumberSERA" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="PaymentAmountDC" ColumnName="PaymentAmountDC" />
+          <ScalarProperty Name="PaymentAmountLC" ColumnName="PaymentAmountLC" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02005_TEMP_HS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02005_TEMP_HS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02005_TEMP_HS">
+          <ScalarProperty Name="GroupingCode" ColumnName="GroupingCode" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02005_TEMP_IS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02005_TEMP_IS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02005_TEMP_IS">
+          <ScalarProperty Name="GroupingCode" ColumnName="GroupingCode" />
+          <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="BillingNo" ColumnName="BillingNo" />
+          <ScalarProperty Name="KuitansiNo" ColumnName="KuitansiNo" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="BusinessAreaCode" ColumnName="BusinessAreaCode" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="SpesNumber" ColumnName="SpesNumber" />
+          <ScalarProperty Name="SONumber" ColumnName="SONumber" />
+          <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+          <ScalarProperty Name="ChasisNumber" ColumnName="ChasisNumber" />
+          <ScalarProperty Name="PONumberSERA" ColumnName="PONumberSERA" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="PaymentAmountDC" ColumnName="PaymentAmountDC" />
+          <ScalarProperty Name="PaymentAmountLC" ColumnName="PaymentAmountLC" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02006">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02006">
+        <MappingFragment StoreEntitySet="CUSTOM_S02006">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="BillingNo" ColumnName="BillingNo" />
+          <ScalarProperty Name="KuitansiNo" ColumnName="KuitansiNo" />
+          <ScalarProperty Name="KuitansiDate" ColumnName="KuitansiDate" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="AmountKuitansiDC" ColumnName="AmountKuitansiDC" />
+          <ScalarProperty Name="BusinessAreaCode" ColumnName="BusinessAreaCode" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="NomorSpes" ColumnName="NomorSpes" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="SalesmanNumber" ColumnName="SalesmanNumber" />
+          <ScalarProperty Name="NomorFakturPajak" ColumnName="NomorFakturPajak" />
+          <ScalarProperty Name="ChasisNumber" ColumnName="ChasisNumber" />
+          <ScalarProperty Name="PONumberSERA" ColumnName="PONumberSERA" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="KuitansiNoRef" ColumnName="KuitansiNoRef" />
+          <ScalarProperty Name="KuitansiDateRef" ColumnName="KuitansiDateRef" />
+          <ScalarProperty Name="DownloadDate" ColumnName="DownloadDate" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="xmlCreatedBy" ColumnName="xmlCreatedBy" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlModifiedBy" ColumnName="xmlModifiedBy" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02007">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02007">
+        <MappingFragment StoreEntitySet="CUSTOM_S02007">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="VERSIONPOSERA" ColumnName="VERSIONPOSERA" />
+          <ScalarProperty Name="BILLINGNO" ColumnName="BILLINGNO" />
+          <ScalarProperty Name="INVOICERECEIPTDATE" ColumnName="INVOICERECEIPTDATE" />
+          <ScalarProperty Name="DATAVERSION" ColumnName="DATAVERSION" />
+          <ScalarProperty Name="payPlan" ColumnName="payPlan" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02007_TEMP">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02007_TEMP">
+        <MappingFragment StoreEntitySet="CUSTOM_S02007_TEMP">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="VERSIONPOSERA" ColumnName="VERSIONPOSERA" />
+          <ScalarProperty Name="BILLINGNO" ColumnName="BILLINGNO" />
+          <ScalarProperty Name="INVOICERECEIPTDATE" ColumnName="INVOICERECEIPTDATE" />
+          <ScalarProperty Name="DATAVERSION" ColumnName="DATAVERSION" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+          <ScalarProperty Name="payPlan" ColumnName="payPlan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02008">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02008">
+        <MappingFragment StoreEntitySet="CUSTOM_S02008">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="DateEntryCarrosserieAccessories" ColumnName="DateEntryCarrosserieAccessories" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02009_HS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02009_HS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02009_HS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02009_IS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02009_IS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02009_IS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersionAI" ColumnName="DataVersionAI" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="TGLGRSAP" ColumnName="TGLGRSAP" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02009_TEMP_HS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02009_TEMP_HS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02009_TEMP_HS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_S02009_TEMP_IS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_S02009_TEMP_IS">
+        <MappingFragment StoreEntitySet="CUSTOM_S02009_TEMP_IS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersionAI" ColumnName="DataVersionAI" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="TGLGRSAP" ColumnName="TGLGRSAP" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_TRANSACTION">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_TRANSACTION">
+        <MappingFragment StoreEntitySet="CUSTOM_TRANSACTION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Acknowledge" ColumnName="Acknowledge" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ClientTag" ColumnName="ClientTag" />
+          <ScalarProperty Name="CreatedWho" ColumnName="CreatedWho" />
+          <ScalarProperty Name="CreatedWhen" ColumnName="CreatedWhen" />
+          <ScalarProperty Name="ChangedWho" ColumnName="ChangedWho" />
+          <ScalarProperty Name="ChangedWhen" ColumnName="ChangedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_TRANSACTIONDATA">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_TRANSACTIONDATA">
+        <MappingFragment StoreEntitySet="CUSTOM_TRANSACTIONDATA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="TransGUID" ColumnName="TransGUID" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="DestinationUser" ColumnName="DestinationUser" />
+          <ScalarProperty Name="Key1" ColumnName="Key1" />
+          <ScalarProperty Name="Key2" ColumnName="Key2" />
+          <ScalarProperty Name="Key3" ColumnName="Key3" />
+          <ScalarProperty Name="DataLength" ColumnName="DataLength" />
+          <ScalarProperty Name="RowStatus" ColumnName="RowStatus" />
+          <ScalarProperty Name="CreatedWho" ColumnName="CreatedWho" />
+          <ScalarProperty Name="CreatedWhen" ColumnName="CreatedWhen" />
+          <ScalarProperty Name="ChangedWho" ColumnName="ChangedWho" />
+          <ScalarProperty Name="ChangedWhen" ColumnName="ChangedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_TRANSACTIONDATADETAIL">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_TRANSACTIONDATADETAIL">
+        <MappingFragment StoreEntitySet="CUSTOM_TRANSACTIONDATADETAIL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_USER">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_USER">
+        <MappingFragment StoreEntitySet="CUSTOM_USER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="PassCode" ColumnName="PassCode" />
+          <ScalarProperty Name="ClientTag" ColumnName="ClientTag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOM_VENDOR_TRANSACTION">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOM_VENDOR_TRANSACTION">
+        <MappingFragment StoreEntitySet="CUSTOM_VENDOR_TRANSACTION">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="StatusPOSERA" ColumnName="StatusPOSERA" />
+          <ScalarProperty Name="RejectRevisedPOSERA" ColumnName="RejectRevisedPOSERA" />
+          <ScalarProperty Name="DocumentNo" ColumnName="DocumentNo" />
+          <ScalarProperty Name="AIMaterialNumber" ColumnName="AIMaterialNumber" />
+          <ScalarProperty Name="SERAMaterialNumber" ColumnName="SERAMaterialNumber" />
+          <ScalarProperty Name="SERAMaterialDescription" ColumnName="SERAMaterialDescription" />
+          <ScalarProperty Name="AIColor" ColumnName="AIColor" />
+          <ScalarProperty Name="SERAColor" ColumnName="SERAColor" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="SalesOrderNo" ColumnName="SalesOrderNo" />
+          <ScalarProperty Name="SalesOrderStatus" ColumnName="SalesOrderStatus" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="BillingStatus" ColumnName="BillingStatus" />
+          <ScalarProperty Name="CancellationReason" ColumnName="CancellationReason" />
+          <ScalarProperty Name="BSTKBNo" ColumnName="BSTKBNo" />
+          <ScalarProperty Name="RevisiSTNK" ColumnName="RevisiSTNK" />
+          <ScalarProperty Name="NamaPenerima" ColumnName="NamaPenerima" />
+          <ScalarProperty Name="AlamatPenerima" ColumnName="AlamatPenerima" />
+          <ScalarProperty Name="StatusCancel" ColumnName="StatusCancel" />
+          <ScalarProperty Name="ReasonRejection" ColumnName="ReasonRejection" />
+          <ScalarProperty Name="AmountKuitansiDC" ColumnName="AmountKuitansiDC" />
+          <ScalarProperty Name="BusinessAreaCode" ColumnName="BusinessAreaCode" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="NomorSpes" ColumnName="NomorSpes" />
+          <ScalarProperty Name="SalesmanNumber" ColumnName="SalesmanNumber" />
+          <ScalarProperty Name="KuitansiNoRef" ColumnName="KuitansiNoRef" />
+          <ScalarProperty Name="KuitansiDateRef" ColumnName="KuitansiDateRef" />
+          <ScalarProperty Name="DownloadDate" ColumnName="DownloadDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMBPKBs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMBPKB">
+        <MappingFragment StoreEntitySet="CUSTOMBPKB">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="TGLPROMISEDELIVERYBPKB" ColumnName="TGLPROMISEDELIVERYBPKB" />
+          <ScalarProperty Name="ACTUALRECEIVEDBPKBDICAB" ColumnName="ACTUALRECEIVEDBPKBDICAB" />
+          <ScalarProperty Name="ACTUALRECEIVEDBPKBDIHO" ColumnName="ACTUALRECEIVEDBPKBDIHO" />
+          <ScalarProperty Name="DETAILPROBLEM" ColumnName="DETAILPROBLEM" />
+          <ScalarProperty Name="DELIVERYDATEBPKB" ColumnName="DELIVERYDATEBPKB" />
+          <ScalarProperty Name="KETSURATUBAHBENTUK" ColumnName="KETSURATUBAHBENTUK" />
+          <ScalarProperty Name="KETBPKB" ColumnName="KETBPKB" />
+          <ScalarProperty Name="KETKAROSERI" ColumnName="KETKAROSERI" />
+          <ScalarProperty Name="LOKASIBPKB" ColumnName="LOKASIBPKB" />
+          <ScalarProperty Name="NOFAKTUR" ColumnName="NOFAKTUR" />
+          <ScalarProperty Name="NOFORMULIRA" ColumnName="NOFORMULIRA" />
+          <ScalarProperty Name="NOSERTIFIKAT" ColumnName="NOSERTIFIKAT" />
+          <ScalarProperty Name="NOSURATUBAHBENTUK" ColumnName="NOSURATUBAHBENTUK" />
+          <ScalarProperty Name="NOSERTIFIKATREGUJITIPE" ColumnName="NOSERTIFIKATREGUJITIPE" />
+          <ScalarProperty Name="NOBPKB" ColumnName="NOBPKB" />
+          <ScalarProperty Name="NOPOLISI" ColumnName="NOPOLISI" />
+          <ScalarProperty Name="POSISIBPKB" ColumnName="POSISIBPKB" />
+          <ScalarProperty Name="PROGRESBPKB" ColumnName="PROGRESBPKB" />
+          <ScalarProperty Name="STATUSBPKB" ColumnName="STATUSBPKB" />
+          <ScalarProperty Name="TGLFAKTUR" ColumnName="TGLFAKTUR" />
+          <ScalarProperty Name="TGLFORMULIRA" ColumnName="TGLFORMULIRA" />
+          <ScalarProperty Name="TGLSERAHBPKB" ColumnName="TGLSERAHBPKB" />
+          <ScalarProperty Name="TGLSERTIFIKAT" ColumnName="TGLSERTIFIKAT" />
+          <ScalarProperty Name="TGLSURATUBAHBENTUK" ColumnName="TGLSURATUBAHBENTUK" />
+          <ScalarProperty Name="TGLGRBPKB" ColumnName="TGLGRBPKB" />
+          <ScalarProperty Name="TGLSTNK" ColumnName="TGLSTNK" />
+          <ScalarProperty Name="TGLBPKBDIKIRIMKEMBALI" ColumnName="TGLBPKBDIKIRIMKEMBALI" />
+          <ScalarProperty Name="ACTUALDELIVERYBPKBTOFINANCE" ColumnName="ACTUALDELIVERYBPKBTOFINANCE" />
+          <ScalarProperty Name="DATEDELIVERYTOBRANCHORVENDOR" ColumnName="DATEDELIVERYTOBRANCHORVENDOR" />
+          <ScalarProperty Name="REMARKSDETAILPROBLEM" ColumnName="REMARKSDETAILPROBLEM" />
+          <ScalarProperty Name="ACTUALRECEIVEDBPKBHOBACK" ColumnName="ACTUALRECEIVEDBPKBHOBACK" />
+          <ScalarProperty Name="STCKDATE" ColumnName="STCKDATE" />
+          <ScalarProperty Name="NOPOLISI_INPUT" ColumnName="NOPOLISI_INPUT" />
+          <ScalarProperty Name="TGLSTNK_INPUT" ColumnName="TGLSTNK_INPUT" />
+          <ScalarProperty Name="REASONREVISEBPKB" ColumnName="REASONREVISEBPKB" />
+          <ScalarProperty Name="REVISEDATE" ColumnName="REVISEDATE" />
+          <ScalarProperty Name="isRevised" ColumnName="isRevised" />
+          <ScalarProperty Name="NOSURATRUBAHWARNA" ColumnName="NOSURATRUBAHWARNA" />
+          <ScalarProperty Name="TANGGALSURATRUBAHWARNA" ColumnName="TANGGALSURATRUBAHWARNA" />
+          <ScalarProperty Name="KETERANGANSURATRUBAHWARNA" ColumnName="KETERANGANSURATRUBAHWARNA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMCITies">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMCITY">
+        <MappingFragment StoreEntitySet="CUSTOMCITY">
+          <ScalarProperty Name="CITYID" ColumnName="CITYID" />
+          <ScalarProperty Name="CITYNAME" ColumnName="CITYNAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DIBUATOLEH" ColumnName="DIBUATOLEH" />
+          <ScalarProperty Name="DIBUATTGL" ColumnName="DIBUATTGL" />
+          <ScalarProperty Name="DIUBAHOLEH" ColumnName="DIUBAHOLEH" />
+          <ScalarProperty Name="DIUBAHTGL" ColumnName="DIUBAHTGL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMCOMPANies">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMCOMPANY">
+        <MappingFragment StoreEntitySet="CUSTOMCOMPANY">
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="COMPANYNAME" ColumnName="COMPANYNAME" />
+          <ScalarProperty Name="ALAMAT" ColumnName="ALAMAT" />
+          <ScalarProperty Name="KOTA" ColumnName="KOTA" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="POSTALCODE" ColumnName="POSTALCODE" />
+          <ScalarProperty Name="TELEPON" ColumnName="TELEPON" />
+          <ScalarProperty Name="NPWP" ColumnName="NPWP" />
+          <ScalarProperty Name="KTPTDP" ColumnName="KTPTDP" />
+          <ScalarProperty Name="COMPANYCODETSO" ColumnName="COMPANYCODETSO" />
+          <ScalarProperty Name="COMPANYCODEDSO" ColumnName="COMPANYCODEDSO" />
+          <ScalarProperty Name="COMPANYCODEISO" ColumnName="COMPANYCODEISO" />
+          <ScalarProperty Name="DIBUATOLEH" ColumnName="DIBUATOLEH" />
+          <ScalarProperty Name="DIBUATTGL" ColumnName="DIBUATTGL" />
+          <ScalarProperty Name="DIUBAHOLEH" ColumnName="DIUBAHOLEH" />
+          <ScalarProperty Name="DIUBAHTGL" ColumnName="DIUBAHTGL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMFILEUPLOADs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMFILEUPLOAD">
+        <MappingFragment StoreEntitySet="CUSTOMFILEUPLOAD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FILEUPLOAD" ColumnName="FILEUPLOAD" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMGRs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMGR">
+        <MappingFragment StoreEntitySet="CUSTOMGR">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="ACTUALRECEIVEDUNIT" ColumnName="ACTUALRECEIVEDUNIT" />
+          <ScalarProperty Name="NOCHASIS" ColumnName="NOCHASIS" />
+          <ScalarProperty Name="NOENGINE" ColumnName="NOENGINE" />
+          <ScalarProperty Name="NOEQUIP" ColumnName="NOEQUIP" />
+          <ScalarProperty Name="NOEQUIPBARU" ColumnName="NOEQUIPBARU" />
+          <ScalarProperty Name="TGLCREATEEQUIP" ColumnName="TGLCREATEEQUIP" />
+          <ScalarProperty Name="TGLGRSAP" ColumnName="TGLGRSAP" />
+          <ScalarProperty Name="NAMAPEMILIK" ColumnName="NAMAPEMILIK" />
+          <ScalarProperty Name="VENDORNAMEAP" ColumnName="VENDORNAMEAP" />
+          <ScalarProperty Name="STATUSDELIVERYUNIT" ColumnName="STATUSDELIVERYUNIT" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="ACTUALRECEIVEDUNITINBDEL" ColumnName="ACTUALRECEIVEDUNITINBDEL" />
+          <ScalarProperty Name="NOCHASIS_INPUT" ColumnName="NOCHASIS_INPUT" />
+          <ScalarProperty Name="NOENGINE_INPUT" ColumnName="NOENGINE_INPUT" />
+          <ScalarProperty Name="NAMAPEMILIK_INPUT" ColumnName="NAMAPEMILIK_INPUT" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="xmlCreatedBy" ColumnName="xmlCreatedBy" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlModifiedBy" ColumnName="xmlModifiedBy" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+          <ScalarProperty Name="xmlStatusEngine" ColumnName="xmlStatusEngine" />
+          <ScalarProperty Name="xmlModifiedDateEngine" ColumnName="xmlModifiedDateEngine" />
+          <ScalarProperty Name="xmlModifiedByEngine" ColumnName="xmlModifiedByEngine" />
+          <ScalarProperty Name="xmlCreatedDateEngine" ColumnName="xmlCreatedDateEngine" />
+          <ScalarProperty Name="xmlCreatedByEngine" ColumnName="xmlCreatedByEngine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMIRs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMIR">
+        <MappingFragment StoreEntitySet="CUSTOMIR">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="ACTUALRECEIVEDINV" ColumnName="ACTUALRECEIVEDINV" />
+          <ScalarProperty Name="HARGADELIVERYAP" ColumnName="HARGADELIVERYAP" />
+          <ScalarProperty Name="INVDATE" ColumnName="INVDATE" />
+          <ScalarProperty Name="INVNO" ColumnName="INVNO" />
+          <ScalarProperty Name="KETBAYAR" ColumnName="KETBAYAR" />
+          <ScalarProperty Name="NOFAKTURPAJAK" ColumnName="NOFAKTURPAJAK" />
+          <ScalarProperty Name="TGLSERAHTAGIHAN" ColumnName="TGLSERAHTAGIHAN" />
+          <ScalarProperty Name="TERMOFPAYMENT" ColumnName="TERMOFPAYMENT" />
+          <ScalarProperty Name="NOAP" ColumnName="NOAP" />
+          <ScalarProperty Name="TGLPEMBAYARAN" ColumnName="TGLPEMBAYARAN" />
+          <ScalarProperty Name="KETTAGIHAN" ColumnName="KETTAGIHAN" />
+          <ScalarProperty Name="ESTIMATEDPAYMENTDATE" ColumnName="ESTIMATEDPAYMENTDATE" />
+          <ScalarProperty Name="INVOICESTATUS" ColumnName="INVOICESTATUS" />
+          <ScalarProperty Name="REASONREJECTIONINVOICE" ColumnName="REASONREJECTIONINVOICE" />
+          <ScalarProperty Name="BPHNUMBER" ColumnName="BPHNUMBER" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="REVISEDATE" ColumnName="REVISEDATE" />
+          <ScalarProperty Name="isRevised" ColumnName="isRevised" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="xmlCreatedBy" ColumnName="xmlCreatedBy" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlModifiedBy" ColumnName="xmlModifiedBy" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+          <ScalarProperty Name="xmlModifiedDateInvNo" ColumnName="xmlModifiedDateInvNo" />
+          <ScalarProperty Name="xmlModifiedByInvNo" ColumnName="xmlModifiedByInvNo" />
+          <ScalarProperty Name="xmlCreatedDateInvNo" ColumnName="xmlCreatedDateInvNo" />
+          <ScalarProperty Name="xmlCreatedByInvNo" ColumnName="xmlCreatedByInvNo" />
+          <ScalarProperty Name="xmlModifiedDateFaktur" ColumnName="xmlModifiedDateFaktur" />
+          <ScalarProperty Name="xmlModifiedByFaktur" ColumnName="xmlModifiedByFaktur" />
+          <ScalarProperty Name="xmlCreatedDateFaktur" ColumnName="xmlCreatedDateFaktur" />
+          <ScalarProperty Name="xmlCreatedByFaktur" ColumnName="xmlCreatedByFaktur" />
+          <ScalarProperty Name="xmlStatusInvNo" ColumnName="xmlStatusInvNo" />
+          <ScalarProperty Name="xmlStatusByEngine" ColumnName="xmlStatusByEngine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMMISCs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMMISC">
+        <MappingFragment StoreEntitySet="CUSTOMMISC">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="MatDoc" ColumnName="MatDoc" />
+          <ScalarProperty Name="ItemDelvDate" ColumnName="ItemDelvDate" />
+          <ScalarProperty Name="ClearingDocNumber" ColumnName="ClearingDocNumber" />
+          <ScalarProperty Name="AccDocNumber" ColumnName="AccDocNumber" />
+          <ScalarProperty Name="FlagDelete" ColumnName="FlagDelete" />
+          <ScalarProperty Name="ReasonRejection" ColumnName="ReasonRejection" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMPRs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMPR">
+        <MappingFragment StoreEntitySet="CUSTOMPR">
+          <ScalarProperty Name="IDROW" ColumnName="IDROW" />
+          <ScalarProperty Name="PRSAP" ColumnName="PRSAP" />
+          <ScalarProperty Name="TGLPRSAP" ColumnName="TGLPRSAP" />
+          <ScalarProperty Name="ATMT" ColumnName="ATMT" />
+          <ScalarProperty Name="TGLRELEASEPR" ColumnName="TGLRELEASEPR" />
+          <ScalarProperty Name="TYPEUNIT" ColumnName="TYPEUNIT" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMPROPOSALPAYMENTs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMPROPOSALPAYMENT">
+        <MappingFragment StoreEntitySet="CUSTOMPROPOSALPAYMENT">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ProposalNumber" ColumnName="ProposalNumber" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="PurchaseDocument" ColumnName="PurchaseDocument" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="ApproveTime" ColumnName="ApproveTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMREGIONs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMREGION">
+        <MappingFragment StoreEntitySet="CUSTOMREGION">
+          <ScalarProperty Name="REGIONID" ColumnName="REGIONID" />
+          <ScalarProperty Name="REGIONNAME" ColumnName="REGIONNAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DIBUATOLEH" ColumnName="DIBUATOLEH" />
+          <ScalarProperty Name="DIBUATTGL" ColumnName="DIBUATTGL" />
+          <ScalarProperty Name="DIUBAHOLEH" ColumnName="DIUBAHOLEH" />
+          <ScalarProperty Name="DIUBAHTGL" ColumnName="DIUBAHTGL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMSERATOAIs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMSERATOAI">
+        <MappingFragment StoreEntitySet="CUSTOMSERATOAI">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+          <ScalarProperty Name="CURRENCYCODE" ColumnName="CURRENCYCODE" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMSTATUS">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMSTATU">
+        <MappingFragment StoreEntitySet="CUSTOMSTATUS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_Aktifitas">
+      <EntityTypeMapping TypeName="eprocurementModel.Log_Aktifitas">
+        <MappingFragment StoreEntitySet="Log_Aktifitas">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="TGL_Aktifitas" ColumnName="TGL_Aktifitas" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="Alamat_IP" ColumnName="Alamat_IP" />
+          <ScalarProperty Name="Catatan" ColumnName="Catatan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_Error">
+      <EntityTypeMapping TypeName="eprocurementModel.Log_Error">
+        <MappingFragment StoreEntitySet="Log_Error">
+          <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ErrorTime" ColumnName="ErrorTime" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_Login">
+      <EntityTypeMapping TypeName="eprocurementModel.Log_Login">
+        <MappingFragment StoreEntitySet="Log_Login">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LoginDate" ColumnName="LoginDate" />
+          <ScalarProperty Name="AlamatIP" ColumnName="AlamatIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogXMLParsings">
+      <EntityTypeMapping TypeName="eprocurementModel.LogXMLParsing">
+        <MappingFragment StoreEntitySet="LogXMLParsing">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="NamaFileXMLLastUpdate" ColumnName="NamaFileXMLLastUpdate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_BentukKaroseri">
+      <EntityTypeMapping TypeName="eprocurementModel.Master_BentukKaroseri">
+        <MappingFragment StoreEntitySet="Master_BentukKaroseri">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BentukKaroseri" ColumnName="BentukKaroseri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_Group">
+      <EntityTypeMapping TypeName="eprocurementModel.Master_Group">
+        <MappingFragment StoreEntitySet="Master_Group">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_Menu">
+      <EntityTypeMapping TypeName="eprocurementModel.Master_Menu">
+        <MappingFragment StoreEntitySet="Master_Menu">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ParentIconClass" ColumnName="ParentIconClass" />
+          <ScalarProperty Name="ChildIconClass" ColumnName="ChildIconClass" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_User">
+      <EntityTypeMapping TypeName="eprocurementModel.Master_User">
+        <MappingFragment StoreEntitySet="Master_User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="Group_VendorID" ColumnName="Group_VendorID" />
+          <ScalarProperty Name="id_vendor" ColumnName="id_vendor" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CountError" ColumnName="CountError" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+          <ScalarProperty Name="NeverExpired" ColumnName="NeverExpired" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="No_Telp" ColumnName="No_Telp" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PLANTID" ColumnName="PLANTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mgmt_Akses">
+      <EntityTypeMapping TypeName="eprocurementModel.Mgmt_Akses">
+        <MappingFragment StoreEntitySet="Mgmt_Akses">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="AllowModify" ColumnName="AllowModify" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSMATERIALs">
+      <EntityTypeMapping TypeName="eprocurementModel.MSMATERIAL">
+        <MappingFragment StoreEntitySet="MSMATERIAL">
+          <ScalarProperty Name="MATERIALNUMBER" ColumnName="MATERIALNUMBER" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="MATERIALTYPE" ColumnName="MATERIALTYPE" />
+          <ScalarProperty Name="MATERIALGROUP" ColumnName="MATERIALGROUP" />
+          <ScalarProperty Name="OLDMATERIAL" ColumnName="OLDMATERIAL" />
+          <ScalarProperty Name="BOMMATERIAL" ColumnName="BOMMATERIAL" />
+          <ScalarProperty Name="BRAND" ColumnName="BRAND" />
+          <ScalarProperty Name="MODEL" ColumnName="MODEL" />
+          <ScalarProperty Name="GARDAN" ColumnName="GARDAN" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+          <ScalarProperty Name="PURCHASEGROUPID" ColumnName="PURCHASEGROUPID" />
+          <ScalarProperty Name="MATERIALIDVENDOR" ColumnName="MATERIALIDVENDOR" />
+          <ScalarProperty Name="PRICELIST" ColumnName="PRICELIST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSPLANTs">
+      <EntityTypeMapping TypeName="eprocurementModel.MSPLANT">
+        <MappingFragment StoreEntitySet="MSPLANT">
+          <ScalarProperty Name="PLANTID" ColumnName="PLANTID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ALAMAT" ColumnName="ALAMAT" />
+          <ScalarProperty Name="KELURAHAN" ColumnName="KELURAHAN" />
+          <ScalarProperty Name="KECAMATAN" ColumnName="KECAMATAN" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="CONTACTPERSONNAME" ColumnName="CONTACTPERSONNAME" />
+          <ScalarProperty Name="ALAMAT2" ColumnName="ALAMAT2" />
+          <ScalarProperty Name="ALAMAT3" ColumnName="ALAMAT3" />
+          <ScalarProperty Name="ALAMAT4" ColumnName="ALAMAT4" />
+          <ScalarProperty Name="ALAMAT5" ColumnName="ALAMAT5" />
+          <ScalarProperty Name="PROPINSI" ColumnName="PROPINSI" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="TITLECP" ColumnName="TITLECP" />
+          <ScalarProperty Name="NOHPCP" ColumnName="NOHPCP" />
+          <ScalarProperty Name="NOTELPPLANT" ColumnName="NOTELPPLANT" />
+          <ScalarProperty Name="POSTALCODE" ColumnName="POSTALCODE" />
+          <ScalarProperty Name="CUSTOMERNO" ColumnName="CUSTOMERNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSSTORAGELOCATIONs">
+      <EntityTypeMapping TypeName="eprocurementModel.MSSTORAGELOCATION">
+        <MappingFragment StoreEntitySet="MSSTORAGELOCATION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="STORAGELOCATIONID" ColumnName="STORAGELOCATIONID" />
+          <ScalarProperty Name="SLOCDESCRIPTION" ColumnName="SLOCDESCRIPTION" />
+          <ScalarProperty Name="PLANTID" ColumnName="PLANTID" />
+          <ScalarProperty Name="PLANTDESCRIPTION" ColumnName="PLANTDESCRIPTION" />
+          <ScalarProperty Name="STREET" ColumnName="STREET" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="POSTALCODE" ColumnName="POSTALCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSVENDORs">
+      <EntityTypeMapping TypeName="eprocurementModel.MSVENDOR">
+        <MappingFragment StoreEntitySet="MSVENDOR">
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+          <ScalarProperty Name="VENDORNAME" ColumnName="VENDORNAME" />
+          <ScalarProperty Name="STREET" ColumnName="STREET" />
+          <ScalarProperty Name="DISTRIC" ColumnName="DISTRIC" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="POSTALCODE" ColumnName="POSTALCODE" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="EMAIL2" ColumnName="EMAIL2" />
+          <ScalarProperty Name="EMAIL3" ColumnName="EMAIL3" />
+          <ScalarProperty Name="PLANTIDTSO" ColumnName="PLANTIDTSO" />
+          <ScalarProperty Name="EMAIL4" ColumnName="EMAIL4" />
+          <ScalarProperty Name="EMAIL5" ColumnName="EMAIL5" />
+          <ScalarProperty Name="EMAIL6" ColumnName="EMAIL6" />
+          <ScalarProperty Name="EMAIL7" ColumnName="EMAIL7" />
+          <ScalarProperty Name="EMAIL8" ColumnName="EMAIL8" />
+          <ScalarProperty Name="B2B" ColumnName="B2B" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SLUSERs">
+      <EntityTypeMapping TypeName="eprocurementModel.SLUSER">
+        <MappingFragment StoreEntitySet="SLUSER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NRP" ColumnName="NRP" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="JOBROLEKEY" ColumnName="JOBROLEKEY" />
+          <ScalarProperty Name="JOBROLEDESC" ColumnName="JOBROLEDESC" />
+          <ScalarProperty Name="JOBPOSITIONKEY" ColumnName="JOBPOSITIONKEY" />
+          <ScalarProperty Name="JOBPOSITIONDESC" ColumnName="JOBPOSITIONDESC" />
+          <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="SALESOFFICE" ColumnName="SALESOFFICE" />
+          <ScalarProperty Name="SALESGROUP" ColumnName="SALESGROUP" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="SIGNATUREPATH" ColumnName="SIGNATUREPATH" />
+          <ScalarProperty Name="SMREFERENCE" ColumnName="SMREFERENCE" />
+          <ScalarProperty Name="REPORTINGNAME" ColumnName="REPORTINGNAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATUS_UPLOAD">
+      <EntityTypeMapping TypeName="eprocurementModel.STATUS_UPLOAD">
+        <MappingFragment StoreEntitySet="STATUS_UPLOAD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FILE_UPLOAD" ColumnName="FILE_UPLOAD" />
+          <ScalarProperty Name="NO_PO" ColumnName="NO_PO" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATUS_UPLOADBPKB">
+      <EntityTypeMapping TypeName="eprocurementModel.STATUS_UPLOADBPKB">
+        <MappingFragment StoreEntitySet="STATUS_UPLOADBPKB">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FILE_UPLOAD" ColumnName="FILE_UPLOAD" />
+          <ScalarProperty Name="NO_PO" ColumnName="NO_PO" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATUS_UPLOADDELIVERY">
+      <EntityTypeMapping TypeName="eprocurementModel.STATUS_UPLOADDELIVERY">
+        <MappingFragment StoreEntitySet="STATUS_UPLOADDELIVERY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FILE_UPLOAD" ColumnName="FILE_UPLOAD" />
+          <ScalarProperty Name="NO_PO" ColumnName="NO_PO" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATUS_UPLOADDETAIL">
+      <EntityTypeMapping TypeName="eprocurementModel.STATUS_UPLOADDETAIL">
+        <MappingFragment StoreEntitySet="STATUS_UPLOADDETAIL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FILE_UPLOAD" ColumnName="FILE_UPLOAD" />
+          <ScalarProperty Name="NO_PO" ColumnName="NO_PO" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATUS_UPLOADREQUIREMENT">
+      <EntityTypeMapping TypeName="eprocurementModel.STATUS_UPLOADREQUIREMENT">
+        <MappingFragment StoreEntitySet="STATUS_UPLOADREQUIREMENT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FILE_UPLOAD" ColumnName="FILE_UPLOAD" />
+          <ScalarProperty Name="NO_PO" ColumnName="NO_PO" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STREAMLINERs">
+      <EntityTypeMapping TypeName="eprocurementModel.STREAMLINER">
+        <MappingFragment StoreEntitySet="STREAMLINER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SalesContractNumber" ColumnName="SalesContractNumber" />
+          <ScalarProperty Name="SalesContractDate" ColumnName="SalesContractDate" />
+          <ScalarProperty Name="PRDeliveryDate" ColumnName="PRDeliveryDate" />
+          <ScalarProperty Name="RequesterName" ColumnName="RequesterName" />
+          <ScalarProperty Name="PRStatus" ColumnName="PRStatus" />
+          <ScalarProperty Name="PRKaroseri" ColumnName="PRKaroseri" />
+          <ScalarProperty Name="PRAccessories" ColumnName="PRAccessories" />
+          <ScalarProperty Name="ProcessVKaroseri" ColumnName="ProcessVKaroseri" />
+          <ScalarProperty Name="ProcessVAccs" ColumnName="ProcessVAccs" />
+          <ScalarProperty Name="PROMISEDLVDATEPO" ColumnName="PROMISEDLVDATEPO" />
+          <ScalarProperty Name="PeriodePO" ColumnName="PeriodePO" />
+          <ScalarProperty Name="OfficerName" ColumnName="OfficerName" />
+          <ScalarProperty Name="POStatus" ColumnName="POStatus" />
+          <ScalarProperty Name="BBN" ColumnName="BBN" />
+          <ScalarProperty Name="Merk" ColumnName="Merk" />
+          <ScalarProperty Name="BentukAkhirUnit" ColumnName="BentukAkhirUnit" />
+          <ScalarProperty Name="Gardan" ColumnName="Gardan" />
+          <ScalarProperty Name="EXPECTEDDATEDELIVERED" ColumnName="EXPECTEDDATEDELIVERED" />
+          <ScalarProperty Name="Plant" ColumnName="Plant" />
+          <ScalarProperty Name="PRType" ColumnName="PRType" />
+          <ScalarProperty Name="REQUESTDELIVERYDATE" ColumnName="REQUESTDELIVERYDATE" />
+          <ScalarProperty Name="PRDATEASSIGNMENT" ColumnName="PRDATEASSIGNMENT" />
+          <ScalarProperty Name="ItemDoc" ColumnName="ItemDoc" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="VendorAccountNumber" ColumnName="VendorAccountNumber" />
+          <ScalarProperty Name="MatGroup" ColumnName="MatGroup" />
+          <ScalarProperty Name="DocCond" ColumnName="DocCond" />
+          <ScalarProperty Name="UoM" ColumnName="UoM" />
+          <ScalarProperty Name="InfoRecord" ColumnName="InfoRecord" />
+          <ScalarProperty Name="CurrDisc" ColumnName="CurrDisc" />
+          <ScalarProperty Name="CurrBBN" ColumnName="CurrBBN" />
+          <ScalarProperty Name="CurrDPP" ColumnName="CurrDPP" />
+          <ScalarProperty Name="DLCPrice" ColumnName="DLCPrice" />
+          <ScalarProperty Name="CurrDLC" ColumnName="CurrDLC" />
+          <ScalarProperty Name="CurrPPN" ColumnName="CurrPPN" />
+          <ScalarProperty Name="NetPrice" ColumnName="NetPrice" />
+          <ScalarProperty Name="CurrOPT" ColumnName="CurrOPT" />
+          <ScalarProperty Name="DocPrice" ColumnName="DocPrice" />
+          <ScalarProperty Name="ItemText" ColumnName="ItemText" />
+          <ScalarProperty Name="TextLine2" ColumnName="TextLine2" />
+          <ScalarProperty Name="TextLine3" ColumnName="TextLine3" />
+          <ScalarProperty Name="TextLine4" ColumnName="TextLine4" />
+          <ScalarProperty Name="TextLine5" ColumnName="TextLine5" />
+          <ScalarProperty Name="TextLine6" ColumnName="TextLine6" />
+          <ScalarProperty Name="TextLine7" ColumnName="TextLine7" />
+          <ScalarProperty Name="TextLine8" ColumnName="TextLine8" />
+          <ScalarProperty Name="TextLine9" ColumnName="TextLine9" />
+          <ScalarProperty Name="TextLine10" ColumnName="TextLine10" />
+          <ScalarProperty Name="TextLine11" ColumnName="TextLine11" />
+          <ScalarProperty Name="CurrNetprInfRec" ColumnName="CurrNetprInfRec" />
+          <ScalarProperty Name="CarDesc" ColumnName="CarDesc" />
+          <ScalarProperty Name="MatDocItem" ColumnName="MatDocItem" />
+          <ScalarProperty Name="FiscalYear" ColumnName="FiscalYear" />
+          <ScalarProperty Name="matdocGI" ColumnName="matdocGI" />
+          <ScalarProperty Name="ManSerialNumber" ColumnName="ManSerialNumber" />
+          <ScalarProperty Name="AssetNumber" ColumnName="AssetNumber" />
+          <ScalarProperty Name="CarRBentuk" ColumnName="CarRBentuk" />
+          <ScalarProperty Name="DateCarRBentuk" ColumnName="DateCarRBentuk" />
+          <ScalarProperty Name="CarFaktur" ColumnName="CarFaktur" />
+          <ScalarProperty Name="DateCarFaktur" ColumnName="DateCarFaktur" />
+          <ScalarProperty Name="CarFormA" ColumnName="CarFormA" />
+          <ScalarProperty Name="DateCarFormA" ColumnName="DateCarFormA" />
+          <ScalarProperty Name="CarSertif" ColumnName="CarSertif" />
+          <ScalarProperty Name="DateCarSertif" ColumnName="DateCarSertif" />
+          <ScalarProperty Name="CarRegUji" ColumnName="CarRegUji" />
+          <ScalarProperty Name="CarBPKB" ColumnName="CarBPKB" />
+          <ScalarProperty Name="StatusCarBPKB" ColumnName="StatusCarBPKB" />
+          <ScalarProperty Name="RefKey" ColumnName="RefKey" />
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="SchedItem" ColumnName="SchedItem" />
+          <ScalarProperty Name="SchedDelvDate" ColumnName="SchedDelvDate" />
+          <ScalarProperty Name="TujuanDeliveryUnit" ColumnName="TujuanDeliveryUnit" />
+          <ScalarProperty Name="Approver" ColumnName="Approver" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="eprocurementModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UPLOAD_FILE">
+      <EntityTypeMapping TypeName="eprocurementModel.UPLOAD_FILE">
+        <MappingFragment StoreEntitySet="UPLOAD_FILE">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="TGLPO" ColumnName="TGLPO" />
+          <ScalarProperty Name="KET" ColumnName="KET" />
+          <ScalarProperty Name="FILE" ColumnName="FILE" />
+          <ScalarProperty Name="LASTUSER" ColumnName="LASTUSER" />
+          <ScalarProperty Name="LASTDATE" ColumnName="LASTDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENDOR_GROUP">
+      <EntityTypeMapping TypeName="eprocurementModel.VENDOR_GROUP">
+        <MappingFragment StoreEntitySet="VENDOR_GROUP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Group_VendorID" ColumnName="Group_VendorID" />
+          <ScalarProperty Name="Group_VendorName" ColumnName="Group_VendorName" />
+          <ScalarProperty Name="Create_By" ColumnName="Create_By" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMPOes">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMPO">
+        <MappingFragment StoreEntitySet="CUSTOMPO">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="TGLPO" ColumnName="TGLPO" />
+          <ScalarProperty Name="PRNUMBERSAP" ColumnName="PRNUMBERSAP" />
+          <ScalarProperty Name="HARGAOPTIONAL" ColumnName="HARGAOPTIONAL" />
+          <ScalarProperty Name="TGLKIRIMCABVENDOR" ColumnName="TGLKIRIMCABVENDOR" />
+          <ScalarProperty Name="KETPO" ColumnName="KETPO" />
+          <ScalarProperty Name="PPNOPTIONAL" ColumnName="PPNOPTIONAL" />
+          <ScalarProperty Name="CABANGVENDOR" ColumnName="CABANGVENDOR" />
+          <ScalarProperty Name="DESCCHANGEPO" ColumnName="DESCCHANGEPO" />
+          <ScalarProperty Name="DESCPO" ColumnName="DESCPO" />
+          <ScalarProperty Name="DISC" ColumnName="DISC" />
+          <ScalarProperty Name="HARGABBN" ColumnName="HARGABBN" />
+          <ScalarProperty Name="HARGADPP" ColumnName="HARGADPP" />
+          <ScalarProperty Name="HARGAPPNUNIT" ColumnName="HARGAPPNUNIT" />
+          <ScalarProperty Name="MAINTYPEUNIT" ColumnName="MAINTYPEUNIT" />
+          <ScalarProperty Name="PRICELIST" ColumnName="PRICELIST" />
+          <ScalarProperty Name="PROMISEDLVDATEPO" ColumnName="PROMISEDLVDATEPO" />
+          <ScalarProperty Name="TGLCHANGEPO" ColumnName="TGLCHANGEPO" />
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+          <ScalarProperty Name="VENDORNAME" ColumnName="VENDORNAME" />
+          <ScalarProperty Name="BIAYAPENGIRIMAN" ColumnName="BIAYAPENGIRIMAN" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="BENTUKAKHIRUNIT" ColumnName="BENTUKAKHIRUNIT" />
+          <ScalarProperty Name="HISTORYPO" ColumnName="HISTORYPO" />
+          <ScalarProperty Name="TGLMASUKKAROSERI" ColumnName="TGLMASUKKAROSERI" />
+          <ScalarProperty Name="TGLSELESAIKAROSERI" ColumnName="TGLSELESAIKAROSERI" />
+          <ScalarProperty Name="PURCHASESTATUS" ColumnName="PURCHASESTATUS" />
+          <ScalarProperty Name="POSTATUSID" ColumnName="POSTATUSID" />
+          <ScalarProperty Name="ONTHEROADPRICE" ColumnName="ONTHEROADPRICE" />
+          <ScalarProperty Name="EXPECTEDDATEDELIVERED" ColumnName="EXPECTEDDATEDELIVERED" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="UNITDELIVERYADDRESS" ColumnName="UNITDELIVERYADDRESS" />
+          <ScalarProperty Name="ACTUALDATEDELIVEREDUNIT" ColumnName="ACTUALDATEDELIVEREDUNIT" />
+          <ScalarProperty Name="REMARKSPOVENDOR" ColumnName="REMARKSPOVENDOR" />
+          <ScalarProperty Name="REMARKSCARROSSERIE" ColumnName="REMARKSCARROSSERIE" />
+          <ScalarProperty Name="ACTUALRECEIVEDBPKBHOFROMBRANCH" ColumnName="ACTUALRECEIVEDBPKBHOFROMBRANCH" />
+          <ScalarProperty Name="DELIVERYCOST" ColumnName="DELIVERYCOST" />
+          <ScalarProperty Name="CARROSERIEVENDORNAME" ColumnName="CARROSERIEVENDORNAME" />
+          <ScalarProperty Name="ACCESORIESADDRESS" ColumnName="ACCESORIESADDRESS" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="DODATE" ColumnName="DODATE" />
+          <ScalarProperty Name="DONUMBER" ColumnName="DONUMBER" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="HARGABBN_INPUT" ColumnName="HARGABBN_INPUT" />
+          <ScalarProperty Name="HARGADPP_INPUT" ColumnName="HARGADPP_INPUT" />
+          <ScalarProperty Name="HARGAPPNUNIT_INPUT" ColumnName="HARGAPPNUNIT_INPUT" />
+          <ScalarProperty Name="CARMODEL" ColumnName="CARMODEL" />
+          <ScalarProperty Name="CARSERIES" ColumnName="CARSERIES" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="COMPANYNAME" ColumnName="COMPANYNAME" />
+          <ScalarProperty Name="ATMT" ColumnName="ATMT" />
+          <ScalarProperty Name="KODECABANG" ColumnName="KODECABANG" />
+          <ScalarProperty Name="CABANGTRAC" ColumnName="CABANGTRAC" />
+          <ScalarProperty Name="MERK" ColumnName="MERK" />
+          <ScalarProperty Name="TYPEUNIT" ColumnName="TYPEUNIT" />
+          <ScalarProperty Name="VARIAN" ColumnName="VARIAN" />
+          <ScalarProperty Name="VARIAN_INPUT" ColumnName="VARIAN_INPUT" />
+          <ScalarProperty Name="MERK_INPUT" ColumnName="MERK_INPUT" />
+          <ScalarProperty Name="POQTY" ColumnName="POQTY" />
+          <ScalarProperty Name="PRSAP" ColumnName="PRSAP" />
+          <ScalarProperty Name="REASONREVISEDBYVENDOR" ColumnName="REASONREVISEDBYVENDOR" />
+          <ScalarProperty Name="REVISEDDATE" ColumnName="REVISEDDATE" />
+          <ScalarProperty Name="isRevised" ColumnName="isRevised" />
+          <ScalarProperty Name="TGLGI" ColumnName="TGLGI" />
+          <ScalarProperty Name="RefDocNo" ColumnName="RefDocNo" />
+          <ScalarProperty Name="CODEGROUP" ColumnName="CODEGROUP" />
+          <ScalarProperty Name="TOTALPAYMENT" ColumnName="TOTALPAYMENT" />
+          <ScalarProperty Name="LOCALPRICE" ColumnName="LOCALPRICE" />
+          <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="FISCALYEAR" ColumnName="FISCALYEAR" />
+          <ScalarProperty Name="PROPOSALNUMBER" ColumnName="PROPOSALNUMBER" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="APPROVALDATETIME" ColumnName="APPROVALDATETIME" />
+          <ScalarProperty Name="flagRejection" ColumnName="flagRejection" />
+          <ScalarProperty Name="PICKAROSERI" ColumnName="PICKAROSERI" />
+          <ScalarProperty Name="NOTELEPONKAROSERI" ColumnName="NOTELEPONKAROSERI" />
+          <ScalarProperty Name="BENTUKKAROSERI" ColumnName="BENTUKKAROSERI" />
+          <ScalarProperty Name="SHIPPINGADDRESS1" ColumnName="SHIPPINGADDRESS1" />
+          <ScalarProperty Name="SHIPPINGADDRESS2" ColumnName="SHIPPINGADDRESS2" />
+          <ScalarProperty Name="SHIPPINGADDRESS3" ColumnName="SHIPPINGADDRESS3" />
+          <ScalarProperty Name="SHIPPINGADDRESS4" ColumnName="SHIPPINGADDRESS4" />
+          <ScalarProperty Name="BBNADDRESS1" ColumnName="BBNADDRESS1" />
+          <ScalarProperty Name="BBNADDRESS2" ColumnName="BBNADDRESS2" />
+          <ScalarProperty Name="BBNADDRESS3" ColumnName="BBNADDRESS3" />
+          <ScalarProperty Name="BBNADDRESS4" ColumnName="BBNADDRESS4" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+          <ScalarProperty Name="xmlModifiedBy" ColumnName="xmlModifiedBy" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlCreatedBy" ColumnName="xmlCreatedBy" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="updateqty" ColumnName="updateqty" />
+          <ScalarProperty Name="materialnumber" ColumnName="materialnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMUPDATEs">
+      <EntityTypeMapping TypeName="eprocurementModel.CUSTOMUPDATE">
+        <MappingFragment StoreEntitySet="CUSTOMUPDATE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="NAMA_FIELD" ColumnName="NAMA_FIELD" />
+          <ScalarProperty Name="ISI_FIELD" ColumnName="ISI_FIELD" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master_Vendor">
+      <EntityTypeMapping TypeName="eprocurementModel.Master_Vendor">
+        <MappingFragment StoreEntitySet="Master_Vendor">
+          <ScalarProperty Name="id_vendor" ColumnName="id_vendor" />
+          <ScalarProperty Name="nama_vendor" ColumnName="nama_vendor" />
+          <ScalarProperty Name="alamat_vendor" ColumnName="alamat_vendor" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="telp_vendor" ColumnName="telp_vendor" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="LastUser" ColumnName="LastUser" />
+          <ScalarProperty Name="LastIP" ColumnName="LastIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REMINDER_LOG">
+      <EntityTypeMapping TypeName="eprocurementModel.REMINDER_LOG">
+        <MappingFragment StoreEntitySet="REMINDER_LOG">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="POSTATUS" ColumnName="POSTATUS" />
+          <ScalarProperty Name="LASTMAILDATE" ColumnName="LASTMAILDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENDORMAILs">
+      <EntityTypeMapping TypeName="eprocurementModel.VENDORMAIL">
+        <MappingFragment StoreEntitySet="VENDORMAIL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="eprocurementModel.Store.fn_CountWeekDays" FunctionImportName="fn_CountWeekDays">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.fn_CountWeekDays_Result">
+          <ScalarProperty Name="NoOfWeekDays" ColumnName="NoOfWeekDays" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="eprocurementModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_CancelPOSeraToAI" FunctionName="eprocurementModel.Store.sp_CancelPOSeraToAI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_CancelPOSeraToAI_Result">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSera" ColumnName="VersionPOSera" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="ReasonRejection" ColumnName="ReasonRejection" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="eprocurementModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_CreatePOSeraS02009ToAI_HS" FunctionName="eprocurementModel.Store.sp_CreatePOSeraS02009ToAI_HS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_CreatePOSeraS02009ToAI_HS_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CreatePOSeras02009ToAI_IS" FunctionName="eprocurementModel.Store.sp_CreatePOSeras02009ToAI_IS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_CreatePOSeras02009ToAI_IS_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionDataID" ColumnName="TransactionDataID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="DataVersionAI" ColumnName="DataVersionAI" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="TGLGRSAP" ColumnName="TGLGRSAP" />
+          <ScalarProperty Name="dibuatOleh" ColumnName="dibuatOleh" />
+          <ScalarProperty Name="dibuatTanggal" ColumnName="dibuatTanggal" />
+          <ScalarProperty Name="diubahOleh" ColumnName="diubahOleh" />
+          <ScalarProperty Name="diubahTanggal" ColumnName="diubahTanggal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CreatePOSeraToAI_HS" FunctionName="eprocurementModel.Store.sp_CreatePOSeraToAI_HS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_CreatePOSeraToAI_HS_Result">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+          <ScalarProperty Name="KodeCabangAI" ColumnName="KodeCabangAI" />
+          <ScalarProperty Name="MaterialNumberSERA" ColumnName="MaterialNumberSERA" />
+          <ScalarProperty Name="MaterialDescriptionSERA" ColumnName="MaterialDescriptionSERA" />
+          <ScalarProperty Name="MaterialNumberAI" ColumnName="MaterialNumberAI" />
+          <ScalarProperty Name="ColorDescSERA" ColumnName="ColorDescSERA" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="NamaKaroseri" ColumnName="NamaKaroseri" />
+          <ScalarProperty Name="AlamatKaroseri" ColumnName="AlamatKaroseri" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="NoTelepon" ColumnName="NoTelepon" />
+          <ScalarProperty Name="BentukKaroseri" ColumnName="BentukKaroseri" />
+          <ScalarProperty Name="InfoPromiseDelivery" ColumnName="InfoPromiseDelivery" />
+          <ScalarProperty Name="CustomerSTNKName" ColumnName="CustomerSTNKName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="KTPTDP" ColumnName="KTPTDP" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="PartnerAddress" ColumnName="PartnerAddress" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+          <ScalarProperty Name="PartnerPostalCode" ColumnName="PartnerPostalCode" />
+          <ScalarProperty Name="Diskon" ColumnName="Diskon" />
+          <ScalarProperty Name="Pricing" ColumnName="Pricing" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address4" ColumnName="Address4" />
+          <ScalarProperty Name="Address5" ColumnName="Address5" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CreatePOSeraToAI_IS" FunctionName="eprocurementModel.Store.sp_CreatePOSeraToAI_IS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_CreatePOSeraToAI_IS_Result">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="AccessoriesNumberAI" ColumnName="AccessoriesNumberAI" />
+          <ScalarProperty Name="AccessoriesNumberSERA" ColumnName="AccessoriesNumberSERA" />
+          <ScalarProperty Name="AccessoriesDescriptionSERA" ColumnName="AccessoriesDescriptionSERA" />
+          <ScalarProperty Name="QtyAccessories" ColumnName="QtyAccessories" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DeleteAllTempHSISS02001" FunctionName="eprocurementModel.Store.sp_DeleteAllTempHSISS02001" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAllTempHSISS02005" FunctionName="eprocurementModel.Store.sp_DeleteAllTempHSISS02005" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAllTempHSISS02009" FunctionName="eprocurementModel.Store.sp_DeleteAllTempHSISS02009" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAllTempHSS02003" FunctionName="eprocurementModel.Store.sp_DeleteAllTempHSS02003" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteAllTempHSS02007" FunctionName="eprocurementModel.Store.sp_DeleteAllTempHSS02007" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTempHS" FunctionName="eprocurementModel.Store.sp_DeleteTempHS" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTempHS_s02009" FunctionName="eprocurementModel.Store.sp_DeleteTempHS_s02009" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTempHSS02003" FunctionName="eprocurementModel.Store.sp_DeleteTempHSS02003" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTempHSS02005" FunctionName="eprocurementModel.Store.sp_DeleteTempHSS02005" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTempHSS02007" FunctionName="eprocurementModel.Store.sp_DeleteTempHSS02007" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTempIS" FunctionName="eprocurementModel.Store.sp_DeleteTempIS" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteTemps02009IS" FunctionName="eprocurementModel.Store.sp_DeleteTemps02009IS" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="eprocurementModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_GetDataForXML" FunctionName="eprocurementModel.Store.sp_GetDataForXML">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_GetDataForXML_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="version2" ColumnName="version2" />
+          <ScalarProperty Name="TGLPO" ColumnName="TGLPO" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PONumber2" ColumnName="PONumber2" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="ChassisNumberByVendor2" ColumnName="ChassisNumberByVendor2" />
+          <ScalarProperty Name="MachineNumberByVendor" ColumnName="MachineNumberByVendor" />
+          <ScalarProperty Name="MachineNumberByVendor2" ColumnName="MachineNumberByVendor2" />
+          <ScalarProperty Name="FactureDONumber" ColumnName="FactureDONumber" />
+          <ScalarProperty Name="FactureDONumber2" ColumnName="FactureDONumber2" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="xmlStatus2" ColumnName="xmlStatus2" />
+          <ScalarProperty Name="XmlStatusDoNumber" ColumnName="XmlStatusDoNumber" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlCreatedDate2" ColumnName="xmlCreatedDate2" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+          <ScalarProperty Name="xmlModifiedDate2" ColumnName="xmlModifiedDate2" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="DataVersion2" ColumnName="DataVersion2" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="KODECABANG" ColumnName="KODECABANG" />
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+          <ScalarProperty Name="version3" ColumnName="version3" />
+          <ScalarProperty Name="version4" ColumnName="version4" />
+          <ScalarProperty Name="PONumberSERA3" ColumnName="PONumberSERA3" />
+          <ScalarProperty Name="PONumberSERA4" ColumnName="PONumberSERA4" />
+          <ScalarProperty Name="KuitansiNo3" ColumnName="KuitansiNo3" />
+          <ScalarProperty Name="KuitansiNo4" ColumnName="KuitansiNo4" />
+          <ScalarProperty Name="BillingNo3" ColumnName="BillingNo3" />
+          <ScalarProperty Name="BillingNo4" ColumnName="BillingNo4" />
+          <ScalarProperty Name="NomorFakturPajak3" ColumnName="NomorFakturPajak3" />
+          <ScalarProperty Name="NomorFakturPajak4" ColumnName="NomorFakturPajak4" />
+          <ScalarProperty Name="DownloadDate3" ColumnName="DownloadDate3" />
+          <ScalarProperty Name="DownloadDate4" ColumnName="DownloadDate4" />
+          <ScalarProperty Name="xmlStatus3" ColumnName="xmlStatus3" />
+          <ScalarProperty Name="xmlStatus4" ColumnName="xmlStatus4" />
+          <ScalarProperty Name="xmlCreatedDate3" ColumnName="xmlCreatedDate3" />
+          <ScalarProperty Name="xmlCreatedDate4" ColumnName="xmlCreatedDate4" />
+          <ScalarProperty Name="xmlModifiedDate3" ColumnName="xmlModifiedDate3" />
+          <ScalarProperty Name="xmlModifiedDate4" ColumnName="xmlModifiedDate4" />
+          <ScalarProperty Name="ACTUALRECEIVEDINV" ColumnName="ACTUALRECEIVEDINV" />
+          <ScalarProperty Name="xmlStatusIr" ColumnName="xmlStatusIr" />
+          <ScalarProperty Name="xmlCreatedDateIr" ColumnName="xmlCreatedDateIr" />
+          <ScalarProperty Name="xmlModifiedDateIr" ColumnName="xmlModifiedDateIr" />
+          <ScalarProperty Name="xmlStatusInvNo" ColumnName="xmlStatusInvNo" />
+          <ScalarProperty Name="xmlStatusByEngine" ColumnName="xmlStatusByEngine" />
+          <ScalarProperty Name="xmlCreatedDateInvNo" ColumnName="xmlCreatedDateInvNo" />
+          <ScalarProperty Name="xmlModifiedDateInvNo" ColumnName="xmlModifiedDateInvNo" />
+          <ScalarProperty Name="xmlModifiedDateFaktur" ColumnName="xmlModifiedDateFaktur" />
+          <ScalarProperty Name="xmlCreatedDateFaktur" ColumnName="xmlCreatedDateFaktur" />
+          <ScalarProperty Name="xmlStatusgr" ColumnName="xmlStatusgr" />
+          <ScalarProperty Name="xmlCreatedDategr" ColumnName="xmlCreatedDategr" />
+          <ScalarProperty Name="xmlModifiedDategr" ColumnName="xmlModifiedDategr" />
+          <ScalarProperty Name="xmlStatusEngine" ColumnName="xmlStatusEngine" />
+          <ScalarProperty Name="xmlCreatedDateEngine" ColumnName="xmlCreatedDateEngine" />
+          <ScalarProperty Name="xmlModifiedDateEngine" ColumnName="xmlModifiedDateEngine" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetDataForXML_TEST" FunctionName="eprocurementModel.Store.sp_GetDataForXML_TEST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_GetDataForXML_TEST_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="version2" ColumnName="version2" />
+          <ScalarProperty Name="TGLPO" ColumnName="TGLPO" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PONumber2" ColumnName="PONumber2" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="ChassisNumberByVendor2" ColumnName="ChassisNumberByVendor2" />
+          <ScalarProperty Name="MachineNumberByVendor" ColumnName="MachineNumberByVendor" />
+          <ScalarProperty Name="MachineNumberByVendor2" ColumnName="MachineNumberByVendor2" />
+          <ScalarProperty Name="FactureDONumber" ColumnName="FactureDONumber" />
+          <ScalarProperty Name="FactureDONumber2" ColumnName="FactureDONumber2" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="xmlStatus2" ColumnName="xmlStatus2" />
+          <ScalarProperty Name="XmlStatusDoNumber" ColumnName="XmlStatusDoNumber" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlCreatedDate2" ColumnName="xmlCreatedDate2" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+          <ScalarProperty Name="xmlModifiedDate2" ColumnName="xmlModifiedDate2" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="DataVersion2" ColumnName="DataVersion2" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="KODECABANG" ColumnName="KODECABANG" />
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+          <ScalarProperty Name="version3" ColumnName="version3" />
+          <ScalarProperty Name="version4" ColumnName="version4" />
+          <ScalarProperty Name="PONumberSERA3" ColumnName="PONumberSERA3" />
+          <ScalarProperty Name="PONumberSERA4" ColumnName="PONumberSERA4" />
+          <ScalarProperty Name="KuitansiNo3" ColumnName="KuitansiNo3" />
+          <ScalarProperty Name="KuitansiNo4" ColumnName="KuitansiNo4" />
+          <ScalarProperty Name="BillingNo3" ColumnName="BillingNo3" />
+          <ScalarProperty Name="BillingNo4" ColumnName="BillingNo4" />
+          <ScalarProperty Name="NomorFakturPajak3" ColumnName="NomorFakturPajak3" />
+          <ScalarProperty Name="NomorFakturPajak4" ColumnName="NomorFakturPajak4" />
+          <ScalarProperty Name="DownloadDate3" ColumnName="DownloadDate3" />
+          <ScalarProperty Name="DownloadDate4" ColumnName="DownloadDate4" />
+          <ScalarProperty Name="xmlStatus3" ColumnName="xmlStatus3" />
+          <ScalarProperty Name="xmlStatus4" ColumnName="xmlStatus4" />
+          <ScalarProperty Name="xmlCreatedDate3" ColumnName="xmlCreatedDate3" />
+          <ScalarProperty Name="xmlCreatedDate4" ColumnName="xmlCreatedDate4" />
+          <ScalarProperty Name="xmlModifiedDate3" ColumnName="xmlModifiedDate3" />
+          <ScalarProperty Name="xmlModifiedDate4" ColumnName="xmlModifiedDate4" />
+          <ScalarProperty Name="ACTUALRECEIVEDINV" ColumnName="ACTUALRECEIVEDINV" />
+          <ScalarProperty Name="xmlStatusIr" ColumnName="xmlStatusIr" />
+          <ScalarProperty Name="xmlCreatedDateIr" ColumnName="xmlCreatedDateIr" />
+          <ScalarProperty Name="xmlModifiedDateIr" ColumnName="xmlModifiedDateIr" />
+          <ScalarProperty Name="xmlStatusInvNo" ColumnName="xmlStatusInvNo" />
+          <ScalarProperty Name="xmlStatusByEngine" ColumnName="xmlStatusByEngine" />
+          <ScalarProperty Name="xmlCreatedDateInvNo" ColumnName="xmlCreatedDateInvNo" />
+          <ScalarProperty Name="xmlModifiedDateInvNo" ColumnName="xmlModifiedDateInvNo" />
+          <ScalarProperty Name="xmlModifiedDateFaktur" ColumnName="xmlModifiedDateFaktur" />
+          <ScalarProperty Name="xmlCreatedDateFaktur" ColumnName="xmlCreatedDateFaktur" />
+          <ScalarProperty Name="xmlStatusgr" ColumnName="xmlStatusgr" />
+          <ScalarProperty Name="xmlCreatedDategr" ColumnName="xmlCreatedDategr" />
+          <ScalarProperty Name="xmlModifiedDategr" ColumnName="xmlModifiedDategr" />
+          <ScalarProperty Name="xmlStatusEngine" ColumnName="xmlStatusEngine" />
+          <ScalarProperty Name="xmlCreatedDateEngine" ColumnName="xmlCreatedDateEngine" />
+          <ScalarProperty Name="xmlModifiedDateEngine" ColumnName="xmlModifiedDateEngine" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetDataForXML_TESTING" FunctionName="eprocurementModel.Store.sp_GetDataForXML_TESTING">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_GetDataForXML_TESTING_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="version2" ColumnName="version2" />
+          <ScalarProperty Name="TGLPO" ColumnName="TGLPO" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="PONumber2" ColumnName="PONumber2" />
+          <ScalarProperty Name="ChassisNumberByVendor" ColumnName="ChassisNumberByVendor" />
+          <ScalarProperty Name="ChassisNumberByVendor2" ColumnName="ChassisNumberByVendor2" />
+          <ScalarProperty Name="MachineNumberByVendor" ColumnName="MachineNumberByVendor" />
+          <ScalarProperty Name="MachineNumberByVendor2" ColumnName="MachineNumberByVendor2" />
+          <ScalarProperty Name="FactureDONumber" ColumnName="FactureDONumber" />
+          <ScalarProperty Name="FactureDONumber2" ColumnName="FactureDONumber2" />
+          <ScalarProperty Name="xmlStatus" ColumnName="xmlStatus" />
+          <ScalarProperty Name="xmlStatus2" ColumnName="xmlStatus2" />
+          <ScalarProperty Name="XmlStatusDoNumber" ColumnName="XmlStatusDoNumber" />
+          <ScalarProperty Name="xmlCreatedDate" ColumnName="xmlCreatedDate" />
+          <ScalarProperty Name="xmlCreatedDate2" ColumnName="xmlCreatedDate2" />
+          <ScalarProperty Name="xmlModifiedDate" ColumnName="xmlModifiedDate" />
+          <ScalarProperty Name="xmlModifiedDate2" ColumnName="xmlModifiedDate2" />
+          <ScalarProperty Name="DataVersion" ColumnName="DataVersion" />
+          <ScalarProperty Name="DataVersion2" ColumnName="DataVersion2" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="KODECABANG" ColumnName="KODECABANG" />
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+          <ScalarProperty Name="version3" ColumnName="version3" />
+          <ScalarProperty Name="version4" ColumnName="version4" />
+          <ScalarProperty Name="PONumberSERA3" ColumnName="PONumberSERA3" />
+          <ScalarProperty Name="PONumberSERA4" ColumnName="PONumberSERA4" />
+          <ScalarProperty Name="KuitansiNo3" ColumnName="KuitansiNo3" />
+          <ScalarProperty Name="KuitansiNo4" ColumnName="KuitansiNo4" />
+          <ScalarProperty Name="BillingNo3" ColumnName="BillingNo3" />
+          <ScalarProperty Name="BillingNo4" ColumnName="BillingNo4" />
+          <ScalarProperty Name="NomorFakturPajak3" ColumnName="NomorFakturPajak3" />
+          <ScalarProperty Name="NomorFakturPajak4" ColumnName="NomorFakturPajak4" />
+          <ScalarProperty Name="DownloadDate3" ColumnName="DownloadDate3" />
+          <ScalarProperty Name="DownloadDate4" ColumnName="DownloadDate4" />
+          <ScalarProperty Name="xmlStatus3" ColumnName="xmlStatus3" />
+          <ScalarProperty Name="xmlStatus4" ColumnName="xmlStatus4" />
+          <ScalarProperty Name="xmlCreatedDate3" ColumnName="xmlCreatedDate3" />
+          <ScalarProperty Name="xmlCreatedDate4" ColumnName="xmlCreatedDate4" />
+          <ScalarProperty Name="xmlModifiedDate3" ColumnName="xmlModifiedDate3" />
+          <ScalarProperty Name="xmlModifiedDate4" ColumnName="xmlModifiedDate4" />
+          <ScalarProperty Name="ACTUALRECEIVEDINV" ColumnName="ACTUALRECEIVEDINV" />
+          <ScalarProperty Name="xmlStatusIr" ColumnName="xmlStatusIr" />
+          <ScalarProperty Name="xmlCreatedDateIr" ColumnName="xmlCreatedDateIr" />
+          <ScalarProperty Name="xmlModifiedDateIr" ColumnName="xmlModifiedDateIr" />
+          <ScalarProperty Name="xmlStatusInvNo" ColumnName="xmlStatusInvNo" />
+          <ScalarProperty Name="xmlStatusByEngine" ColumnName="xmlStatusByEngine" />
+          <ScalarProperty Name="xmlCreatedDateInvNo" ColumnName="xmlCreatedDateInvNo" />
+          <ScalarProperty Name="xmlModifiedDateInvNo" ColumnName="xmlModifiedDateInvNo" />
+          <ScalarProperty Name="xmlModifiedDateFaktur" ColumnName="xmlModifiedDateFaktur" />
+          <ScalarProperty Name="xmlCreatedDateFaktur" ColumnName="xmlCreatedDateFaktur" />
+          <ScalarProperty Name="xmlStatusgr" ColumnName="xmlStatusgr" />
+          <ScalarProperty Name="xmlCreatedDategr" ColumnName="xmlCreatedDategr" />
+          <ScalarProperty Name="xmlModifiedDategr" ColumnName="xmlModifiedDategr" />
+          <ScalarProperty Name="xmlStatusEngine" ColumnName="xmlStatusEngine" />
+          <ScalarProperty Name="xmlCreatedDateEngine" ColumnName="xmlCreatedDateEngine" />
+          <ScalarProperty Name="xmlModifiedDateEngine" ColumnName="xmlModifiedDateEngine" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetDataForXMLNonB2B" FunctionName="eprocurementModel.Store.sp_GetDataForXMLNonB2B">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_GetDataForXMLNonB2B_Result">
+          <ScalarProperty Name="ponumber" ColumnName="ponumber" />
+          <ScalarProperty Name="COMPANYCODE" ColumnName="COMPANYCODE" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="KODECABANG" ColumnName="KODECABANG" />
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+          <ScalarProperty Name="NOCHASIS_INPUT" ColumnName="NOCHASIS_INPUT" />
+          <ScalarProperty Name="NOENGINE_INPUT" ColumnName="NOENGINE_INPUT" />
+          <ScalarProperty Name="DONUMBER" ColumnName="DONUMBER" />
+          <ScalarProperty Name="INVNO" ColumnName="INVNO" />
+          <ScalarProperty Name="ACTUALRECEIVEDINV" ColumnName="ACTUALRECEIVEDINV" />
+          <ScalarProperty Name="NOFAKTURPAJAK" ColumnName="NOFAKTURPAJAK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetKodeCabangAI" FunctionName="eprocurementModel.Store.sp_GetKodeCabangAI" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="eprocurementModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="eprocurementModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_PARSINGXML" FunctionName="eprocurementModel.Store.SP_PARSINGXML" />
+    <FunctionImportMapping FunctionImportName="SP_PARSINGXML_BAK" FunctionName="eprocurementModel.Store.SP_PARSINGXML_BAK" />
+    <FunctionImportMapping FunctionImportName="SP_PARSINGXML1" FunctionName="eprocurementModel.Store.SP_PARSINGXML1" />
+    <FunctionImportMapping FunctionImportName="SP_PARSINGXMLMASTERMATERIAL" FunctionName="eprocurementModel.Store.SP_PARSINGXMLMASTERMATERIAL" />
+    <FunctionImportMapping FunctionImportName="SP_PARSINGXMLMASTERPLANT" FunctionName="eprocurementModel.Store.SP_PARSINGXMLMASTERPLANT" />
+    <FunctionImportMapping FunctionImportName="SP_PARSINGXMLMASTERVENDOR" FunctionName="eprocurementModel.Store.SP_PARSINGXMLMASTERVENDOR" />
+    <FunctionImportMapping FunctionImportName="sp_PaymentSeraToAI_HS" FunctionName="eprocurementModel.Store.sp_PaymentSeraToAI_HS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_PaymentSeraToAI_HS_Result">
+          <ScalarProperty Name="GroupingCode" ColumnName="GroupingCode" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_PaymentSeraToAI_IS" FunctionName="eprocurementModel.Store.sp_PaymentSeraToAI_IS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_PaymentSeraToAI_IS_Result">
+          <ScalarProperty Name="GroupingCode" ColumnName="GroupingCode" />
+          <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="BillingNo" ColumnName="BillingNo" />
+          <ScalarProperty Name="KuitansiNo" ColumnName="KuitansiNo" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="BusinessAreaCode" ColumnName="BusinessAreaCode" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="SpesNumber" ColumnName="SpesNumber" />
+          <ScalarProperty Name="SONumber" ColumnName="SONumber" />
+          <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+          <ScalarProperty Name="ChasisNumber" ColumnName="ChasisNumber" />
+          <ScalarProperty Name="PONumberSERA" ColumnName="PONumberSERA" />
+          <ScalarProperty Name="VersionPOSERA" ColumnName="VersionPOSERA" />
+          <ScalarProperty Name="PaymentAmountDC" ColumnName="PaymentAmountDC" />
+          <ScalarProperty Name="PaymentAmountLC" ColumnName="PaymentAmountLC" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="eprocurementModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_SendActualReceiptInvoice" FunctionName="eprocurementModel.Store.sp_SendActualReceiptInvoice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.sp_SendActualReceiptInvoice_Result">
+          <ScalarProperty Name="PONUMBER" ColumnName="PONUMBER" />
+          <ScalarProperty Name="VERSIONPOSERA" ColumnName="VERSIONPOSERA" />
+          <ScalarProperty Name="BILLINGNO" ColumnName="BILLINGNO" />
+          <ScalarProperty Name="INVOICERECEIPTDATE" ColumnName="INVOICERECEIPTDATE" />
+          <ScalarProperty Name="DATAVERSION" ColumnName="DATAVERSION" />
+          <ScalarProperty Name="CompanyCodeAI" ColumnName="CompanyCodeAI" />
+          <ScalarProperty Name="payPlan" ColumnName="payPlan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_UpdateCustomPOStatusPOId" FunctionName="eprocurementModel.Store.sp_UpdateCustomPOStatusPOId" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateDataForXml" FunctionName="eprocurementModel.Store.sp_UpdateDataForXml" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateS02002" FunctionName="eprocurementModel.Store.sp_UpdateS02002" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateS02002_HS" FunctionName="eprocurementModel.Store.sp_UpdateS02002_HS" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateS02002_IS" FunctionName="eprocurementModel.Store.sp_UpdateS02002_IS" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateS02004" FunctionName="eprocurementModel.Store.sp_UpdateS02004" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateS02006" FunctionName="eprocurementModel.Store.sp_UpdateS02006" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateS02008" FunctionName="eprocurementModel.Store.sp_UpdateS02008" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="eprocurementModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spCheckProposalHS" FunctionName="eprocurementModel.Store.spCheckProposalHS" />
+    <FunctionImportMapping FunctionImportName="spCheckProposalIS" FunctionName="eprocurementModel.Store.spCheckProposalIS" />
+    <FunctionImportMapping FunctionImportName="spCheckTempTableParsing" FunctionName="eprocurementModel.Store.spCheckTempTableParsing" />
+    <FunctionImportMapping FunctionImportName="spGetVendorB2b" FunctionName="eprocurementModel.Store.spGetVendorB2b">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="eprocurementModel.spGetVendorB2b_Result">
+          <ScalarProperty Name="VENDORID" ColumnName="VENDORID" />
+          <ScalarProperty Name="VENDORNAME" ColumnName="VENDORNAME" />
+          <ScalarProperty Name="STREET" ColumnName="STREET" />
+          <ScalarProperty Name="DISTRIC" ColumnName="DISTRIC" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="POSTALCODE" ColumnName="POSTALCODE" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="EMAIL2" ColumnName="EMAIL2" />
+          <ScalarProperty Name="EMAIL3" ColumnName="EMAIL3" />
+          <ScalarProperty Name="PLANTIDTSO" ColumnName="PLANTIDTSO" />
+          <ScalarProperty Name="EMAIL4" ColumnName="EMAIL4" />
+          <ScalarProperty Name="EMAIL5" ColumnName="EMAIL5" />
+          <ScalarProperty Name="EMAIL6" ColumnName="EMAIL6" />
+          <ScalarProperty Name="EMAIL7" ColumnName="EMAIL7" />
+          <ScalarProperty Name="EMAIL8" ColumnName="EMAIL8" />
+          <ScalarProperty Name="B2B" ColumnName="B2B" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spMergepayment" FunctionName="eprocurementModel.Store.spMergepayment" />
+    <FunctionImportMapping FunctionImportName="spParsingXmlPaymentByMerge" FunctionName="eprocurementModel.Store.spParsingXmlPaymentByMerge" />
+    <FunctionImportMapping FunctionImportName="spUpdateFlagRejectionByS02005" FunctionName="eprocurementModel.Store.spUpdateFlagRejectionByS02005" />
+  </EntityContainerMapping>
+</Mapping>

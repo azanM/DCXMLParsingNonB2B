@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCDB123E-6678-4326-9FA8-07E90AE58594}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DCGenerateXMLService__NonB2B</RootNamespace>
+    <AssemblyName>DCGenerateXMLService__NonB2B</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\EF\Company_Code.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMBPKB.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMCITY.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMCOMPANY.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMFILEUPLOAD.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMGR.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMIR.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMMISC.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMPO.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMPR.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMPROPOSALPAYMENT.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMREGION.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMSERATOAI.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMSTATU.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOMUPDATE.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_DOWNLOAD_TRANSACTION.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_DOWNLOAD_TRANSACTIONDATA.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_DOWNLOAD_TRANSACTIONDATADETAIL.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_LOG.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02001_HS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02001_IS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02001_TEMP_HS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02001_TEMP_IS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02002.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02003.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02003_TEMP.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02004.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02005_HS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02005_IS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02005_TEMP_HS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02005_TEMP_IS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02006.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02007.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02007_TEMP.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02008.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02009_HS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02009_IS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02009_TEMP_HS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_S02009_TEMP_IS.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_TRANSACTION.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_TRANSACTIONDATA.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_TRANSACTIONDATADETAIL.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_USER.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\CUSTOM_VENDOR_TRANSACTION.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Eproc.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Eproc.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Eproc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Eproc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Eproc.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\fn_CountWeekDays_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\LogXMLParsing.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Log_Aktifitas.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Log_Error.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Log_Login.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Master_BentukKaroseri.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Master_Group.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Master_Menu.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Master_User.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Master_Vendor.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\Mgmt_Akses.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\MSMATERIAL.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\MSPLANT.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\MSSTORAGELOCATION.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\MSVENDOR.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\REMINDER_LOG.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\SLUSER.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\spGetVendorB2b_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_CancelPOSeraToAI_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_CreatePOSeraS02009ToAI_HS_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_CreatePOSeras02009ToAI_IS_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_CreatePOSeraToAI_HS_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_CreatePOSeraToAI_IS_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_GetDataForXMLNonB2B_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_GetDataForXML_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_GetDataForXML_TESTING_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_GetDataForXML_TEST_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_PaymentSeraToAI_HS_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_PaymentSeraToAI_IS_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sp_SendActualReceiptInvoice_Result.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\STATUS_UPLOAD.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\STATUS_UPLOADBPKB.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\STATUS_UPLOADDELIVERY.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\STATUS_UPLOADDETAIL.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\STATUS_UPLOADREQUIREMENT.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\STREAMLINER.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\sysdiagram.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\UPLOAD_FILE.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\VENDORMAIL.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EF\VENDOR_GROUP.cs">
+      <DependentUpon>Eproc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\LinqExtension.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="DataAccess\EF\Eproc.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Eproc.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataAccess\EF\Eproc.edmx.diagram">
+      <DependentUpon>Eproc.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccess\EF\Eproc.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Eproc.edmx</DependentUpon>
+      <LastGenOutput>Eproc.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccess\EF\Eproc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Eproc.edmx</DependentUpon>
+      <LastGenOutput>Eproc.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

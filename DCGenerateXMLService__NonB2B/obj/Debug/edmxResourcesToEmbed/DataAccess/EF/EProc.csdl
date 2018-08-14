@@ -1,0 +1,2434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eprocurementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="fn_CountWeekDays_Result">
+    <Property Name="NoOfWeekDays" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="Company_Code">
+    <Key>
+      <PropertyRef Name="companyCode" />
+    </Key>
+    <Property Name="companyCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="initial" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="companyName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_DOWNLOAD_TRANSACTION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Acknowledge" Type="Boolean" />
+    <Property Name="TicketNo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWhen" Type="DateTime" Precision="3" />
+    <Property Name="ChangedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedWhen" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_DOWNLOAD_TRANSACTIONDATA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionID" Type="Int32" Nullable="false" />
+    <Property Name="AIID" Type="Int32" />
+    <Property Name="TransGUID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FileType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IPAddress" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationUser" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Key1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Key2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Key3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DataLength" Type="Int32" />
+    <Property Name="TransStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogMessage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWhen" Type="DateTime" Precision="3" />
+    <Property Name="ChangedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedWhen" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_DOWNLOAD_TRANSACTIONDATADETAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" Nullable="false" />
+    <Property Name="Data" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_LOG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WebServiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MethodName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Acknowledge" Type="Boolean" Nullable="false" />
+    <Property Name="TicketNo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FileType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedWhen" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ChangedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ChangedWhen" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02001_HS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PODate" Type="DateTime" Precision="3" />
+    <Property Name="Version" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="CustomerNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KodeCabangAI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialNumberSERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialDescriptionSERA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialNumberAI" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ColorDescSERA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="NamaKaroseri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AlamatKaroseri" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PIC" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="NoTelepon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BentukKaroseri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InfoPromiseDelivery" Type="DateTime" Precision="3" />
+    <Property Name="CustomerSTNKName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KTPTDP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PartnerName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PartnerAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Telepon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="RegionCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PartnerPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Diskon" Type="Double" />
+    <Property Name="Pricing" Type="Double" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+    <Property Name="Address2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address5" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02001_IS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PODate" Type="DateTime" Precision="3" />
+    <Property Name="DataVersion" Type="Int32" />
+    <Property Name="AccessoriesNumberAI" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AccessoriesNumberSERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccessoriesDescriptionSERA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="QtyAccessories" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02001_TEMP_HS">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PODate" Type="DateTime" Precision="3" />
+    <Property Name="Version" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="CustomerNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KodeCabangAI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialNumberSERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialDescriptionSERA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialNumberAI" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ColorDescSERA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="NamaKaroseri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AlamatKaroseri" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PIC" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="NoTelepon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BentukKaroseri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InfoPromiseDelivery" Type="DateTime" Precision="3" />
+    <Property Name="CustomerSTNKName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KTPTDP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PartnerName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PartnerAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Telepon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="RegionCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PartnerPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Diskon" Type="Double" />
+    <Property Name="Pricing" Type="Double" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyCodeAI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address5" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02001_TEMP_IS">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PODate" Type="DateTime" Precision="3" />
+    <Property Name="DataVersion" Type="Int32" />
+    <Property Name="AccessoriesNumberAI" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="AccessoriesNumberSERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccessoriesDescriptionSERA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="QtyAccessories" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="CompanyCodeAI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02002">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="DataVersion" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="StatusPOSERA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RejectRevisedPOSERA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AIMaterialNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="SERAMaterialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SERAMaterialDescription" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="AIColor" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SERAColor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="QuotationNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SalesOrderNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SalesOrderStatus" Type="Boolean" />
+    <Property Name="DPPByVendor" Type="Double" />
+    <Property Name="PPNByVendor" Type="Double" />
+    <Property Name="BBNPriceByVendor" Type="Double" />
+    <Property Name="Currency" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ChassisNumberByVendor" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="MachineNumberByVendor" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CBUCKD" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="FactureDONumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BillingStatus" Type="Boolean" />
+    <Property Name="FactureDODate" Type="DateTime" Precision="3" />
+    <Property Name="NoFakturKendaraan" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalFakturKendaraan" Type="DateTime" Precision="3" />
+    <Property Name="CancellationReason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ActualDateDeliveryUnit" Type="DateTime" Precision="3" />
+    <Property Name="BSTKBNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LicensePlateByVendor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STNKDateByVendor" Type="DateTime" Precision="3" />
+    <Property Name="RevisiSTNK" Type="DateTime" Precision="3" />
+    <Property Name="NoSertifikat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TglSertifikat" Type="DateTime" Precision="3" />
+    <Property Name="NoFormulirA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="TglFormulirA" Type="DateTime" Precision="3" />
+    <Property Name="NoSertifikatRegUjiTipe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ActualDeliveryBPKBDate" Type="DateTime" Precision="3" />
+    <Property Name="NamaPenerima" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="AlamatPenerima" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BPKBNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="RemarksBPKB" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RevisiBPKB" Type="DateTime" Precision="3" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+    <Property Name="xmlStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02003">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSera" Type="Int32" />
+    <Property Name="DataVersion" Type="Int32" />
+    <Property Name="KodeCabangAI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonRejection" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02003_TEMP">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VersionPOSera" Type="Int32" />
+    <Property Name="DataVersion" Type="Int32" />
+    <Property Name="KodeCabangAI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonRejection" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyCodeAI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02004">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="DataVersion" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonRejection" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02005_HS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="GroupingCode" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="3" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="TotalPayment" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02005_IS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="GroupingCode" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="paymentDate" Type="DateTime" Precision="3" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="BillingNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="KuitansiNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessAreaCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SpesNumber" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="SONumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Salesman" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ChasisNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="PONumberSERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Int32" />
+    <Property Name="PaymentAmountDC" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="PaymentAmountLC" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02005_TEMP_HS">
+    <Key>
+      <PropertyRef Name="GroupingCode" />
+    </Key>
+    <Property Name="GroupingCode" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalPayment" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="CompanyCodeAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02005_TEMP_IS">
+    <Key>
+      <PropertyRef Name="PONumberSERA" />
+    </Key>
+    <Property Name="GroupingCode" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="paymentDate" Type="DateTime" Precision="3" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="BillingNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="KuitansiNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessAreaCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SpesNumber" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="SONumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Salesman" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ChasisNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="PONumberSERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VersionPOSERA" Type="Int32" />
+    <Property Name="PaymentAmountDC" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="PaymentAmountLC" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="flags" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyCodeAI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02006">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="BillingNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="KuitansiNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="KuitansiDate" Type="DateTime" Precision="3" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="AmountKuitansiDC" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="BusinessAreaCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NomorSpes" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="SalesOrderNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SalesmanNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NomorFakturPajak" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+    <Property Name="ChasisNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="PONumberSERA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="KuitansiNoRef" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="KuitansiDateRef" Type="DateTime" Precision="3" />
+    <Property Name="DownloadDate" Type="DateTime" Precision="3" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+    <Property Name="xmlStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02007">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VERSIONPOSERA" Type="Int32" />
+    <Property Name="BILLINGNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INVOICERECEIPTDATE" Type="DateTime" Precision="3" />
+    <Property Name="DATAVERSION" Type="Int32" />
+    <Property Name="payPlan" Type="DateTime" Precision="3" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02007_TEMP">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VERSIONPOSERA" Type="Int32" />
+    <Property Name="BILLINGNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INVOICERECEIPTDATE" Type="DateTime" Precision="3" />
+    <Property Name="DATAVERSION" Type="Int32" />
+    <Property Name="CompanyCodeAI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="payPlan" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02008">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="DataVersion" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="SalesOrderNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ChassisNumberByVendor" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="DateEntryCarrosserieAccessories" Type="DateTime" Precision="3" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02009_HS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DataVersion" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02009_IS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DataVersionAI" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ChassisNumberByVendor" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="TGLGRSAP" Type="DateTime" Precision="3" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02009_TEMP_HS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DataVersion" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CompanyCodeAI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="KodeCabangAI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_S02009_TEMP_IS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionPOSERA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DataVersionAI" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ChassisNumberByVendor" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="TGLGRSAP" Type="DateTime" Precision="3" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_TRANSACTION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Acknowledge" Type="Boolean" />
+    <Property Name="TicketNo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ClientTag" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWhen" Type="DateTime" Precision="3" />
+    <Property Name="ChangedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedWhen" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_TRANSACTIONDATA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionID" Type="Int32" Nullable="false" />
+    <Property Name="TransGUID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FileType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IPAddress" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DestinationUser" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Key1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Key2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Key3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DataLength" Type="Int32" />
+    <Property Name="RowStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedWhen" Type="DateTime" Precision="3" />
+    <Property Name="ChangedWho" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedWhen" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_TRANSACTIONDATADETAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionDataID" Type="Int32" Nullable="false" />
+    <Property Name="Data" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dibuatTanggal" Type="DateTime" Precision="3" />
+    <Property Name="diubahOleh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="diubahTanggal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOM_USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PassCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ClientTag" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOM_VENDOR_TRANSACTION">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VersionPOSERA" Type="Int32" />
+    <Property Name="DataVersion" Type="Int32" />
+    <Property Name="StatusPOSERA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RejectRevisedPOSERA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AIMaterialNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="SERAMaterialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SERAMaterialDescription" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="AIColor" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SERAColor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="QuotationNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SalesOrderNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SalesOrderStatus" Type="Boolean" />
+    <Property Name="Currency" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="BillingStatus" Type="Boolean" />
+    <Property Name="CancellationReason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BSTKBNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="RevisiSTNK" Type="DateTime" Precision="3" />
+    <Property Name="NamaPenerima" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AlamatPenerima" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="StatusCancel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonRejection" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="AmountKuitansiDC" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="BusinessAreaCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NomorSpes" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="SalesmanNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KuitansiNoRef" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="KuitansiDateRef" Type="DateTime" Precision="3" />
+    <Property Name="DownloadDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMBPKB">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TGLPROMISEDELIVERYBPKB" Type="DateTime" Precision="0" />
+    <Property Name="ACTUALRECEIVEDBPKBDICAB" Type="DateTime" Precision="3" />
+    <Property Name="ACTUALRECEIVEDBPKBDIHO" Type="DateTime" Precision="3" />
+    <Property Name="DETAILPROBLEM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DELIVERYDATEBPKB" Type="DateTime" Precision="3" />
+    <Property Name="KETSURATUBAHBENTUK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KETBPKB" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="KETKAROSERI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOKASIBPKB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOFAKTUR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOFORMULIRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOSERTIFIKAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOSURATUBAHBENTUK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOSERTIFIKATREGUJITIPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOBPKB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOPOLISI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="POSISIBPKB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROGRESBPKB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUSBPKB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TGLFAKTUR" Type="DateTime" Precision="3" />
+    <Property Name="TGLFORMULIRA" Type="DateTime" Precision="3" />
+    <Property Name="TGLSERAHBPKB" Type="DateTime" Precision="3" />
+    <Property Name="TGLSERTIFIKAT" Type="DateTime" Precision="3" />
+    <Property Name="TGLSURATUBAHBENTUK" Type="DateTime" Precision="3" />
+    <Property Name="TGLGRBPKB" Type="DateTime" Precision="3" />
+    <Property Name="TGLSTNK" Type="DateTime" Precision="3" />
+    <Property Name="TGLBPKBDIKIRIMKEMBALI" Type="DateTime" Precision="3" />
+    <Property Name="ACTUALDELIVERYBPKBTOFINANCE" Type="DateTime" Precision="3" />
+    <Property Name="DATEDELIVERYTOBRANCHORVENDOR" Type="DateTime" Precision="3" />
+    <Property Name="REMARKSDETAILPROBLEM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ACTUALRECEIVEDBPKBHOBACK" Type="DateTime" Precision="3" />
+    <Property Name="STCKDATE" Type="DateTime" Precision="3" />
+    <Property Name="NOPOLISI_INPUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TGLSTNK_INPUT" Type="DateTime" Precision="3" />
+    <Property Name="REASONREVISEBPKB" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="REVISEDATE" Type="DateTime" Precision="3" />
+    <Property Name="isRevised" Type="Boolean" />
+    <Property Name="NOSURATRUBAHWARNA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TANGGALSURATRUBAHWARNA" Type="DateTime" Precision="0" />
+    <Property Name="KETERANGANSURATRUBAHWARNA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMCITY">
+    <Key>
+      <PropertyRef Name="CITYID" />
+    </Key>
+    <Property Name="CITYID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CITYNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Boolean" />
+    <Property Name="DIBUATOLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIBUATTGL" Type="DateTime" Precision="3" />
+    <Property Name="DIUBAHOLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAHTGL" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMCOMPANY">
+    <Key>
+      <PropertyRef Name="COMPANYCODE" />
+    </Key>
+    <Property Name="COMPANYCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COMPANYNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ALAMAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="KOTA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="REGION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="POSTALCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPON" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NPWP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KTPTDP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANYCODETSO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANYCODEDSO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANYCODEISO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIBUATOLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIBUATTGL" Type="DateTime" Precision="3" />
+    <Property Name="DIUBAHOLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAHTGL" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMFILEUPLOAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FILEUPLOAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMGR">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTUALRECEIVEDUNIT" Type="DateTime" Precision="3" />
+    <Property Name="NOCHASIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOENGINE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOEQUIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOEQUIPBARU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TGLCREATEEQUIP" Type="DateTime" Precision="3" />
+    <Property Name="TGLGRSAP" Type="DateTime" Precision="3" />
+    <Property Name="NAMAPEMILIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VENDORNAMEAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUSDELIVERYUNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ACTUALRECEIVEDUNITINBDEL" Type="DateTime" Precision="3" />
+    <Property Name="NOCHASIS_INPUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOENGINE_INPUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NAMAPEMILIK_INPUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="xmlStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlStatusEngine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="xmlModifiedDateEngine" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedByEngine" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDateEngine" Type="DateTime" Precision="3" />
+    <Property Name="xmlCreatedByEngine" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMIR">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTUALRECEIVEDINV" Type="DateTime" Precision="3" />
+    <Property Name="HARGADELIVERYAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INVDATE" Type="DateTime" Precision="3" />
+    <Property Name="INVNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KETBAYAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOFAKTURPAJAK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TGLSERAHTAGIHAN" Type="DateTime" Precision="3" />
+    <Property Name="TERMOFPAYMENT" Type="Int32" />
+    <Property Name="NOAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TGLPEMBAYARAN" Type="DateTime" Precision="3" />
+    <Property Name="KETTAGIHAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ESTIMATEDPAYMENTDATE" Type="DateTime" Precision="3" />
+    <Property Name="INVOICESTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REASONREJECTIONINVOICE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BPHNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="REVISEDATE" Type="DateTime" Precision="3" />
+    <Property Name="isRevised" Type="Boolean" />
+    <Property Name="xmlStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedDateInvNo" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedByInvNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDateInvNo" Type="DateTime" Precision="3" />
+    <Property Name="xmlCreatedByInvNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlModifiedDateFaktur" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedByFaktur" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDateFaktur" Type="DateTime" Precision="3" />
+    <Property Name="xmlCreatedByFaktur" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlStatusInvNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="xmlStatusByEngine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMMISC">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MatDoc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemDelvDate" Type="DateTime" Precision="3" />
+    <Property Name="ClearingDocNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccDocNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FlagDelete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonRejection" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMPR">
+    <Key>
+      <PropertyRef Name="IDROW" />
+    </Key>
+    <Property Name="IDROW" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PRSAP" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="TGLPRSAP" Type="DateTime" Precision="3" />
+    <Property Name="ATMT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TGLRELEASEPR" Type="DateTime" Precision="3" />
+    <Property Name="TYPEUNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YEAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMPROPOSALPAYMENT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProposalNumber" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CompCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Year" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PurchaseDocument" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Item" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ApproveDate" Type="DateTime" Precision="0" />
+    <Property Name="ApproveTime" Type="Time" Precision="7" />
+    <Property Name="Status" Type="Byte" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMREGION">
+    <Key>
+      <PropertyRef Name="REGIONID" />
+    </Key>
+    <Property Name="REGIONID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="REGIONNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Boolean" />
+    <Property Name="DIBUATOLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIBUATTGL" Type="DateTime" Precision="3" />
+    <Property Name="DIUBAHOLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAHTGL" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMSERATOAI">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VERSION" Type="Decimal" Precision="3" Scale="0" />
+    <Property Name="CURRENCYCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="YEAR" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CUSTOMSTATU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KETERANGAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Log_Aktifitas">
+    <Key>
+      <PropertyRef Name="User_ID" />
+      <PropertyRef Name="TGL_Aktifitas" />
+    </Key>
+    <Property Name="User_ID" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TGL_Aktifitas" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MenuName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Alamat_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Catatan" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Log_Error">
+    <Key>
+      <PropertyRef Name="ErrorID" />
+    </Key>
+    <Property Name="ErrorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorTime" Type="DateTime" Precision="3" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StackTrace" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Log_Login">
+    <Key>
+      <PropertyRef Name="LoginID" />
+    </Key>
+    <Property Name="LoginID" Type="Guid" Nullable="false" />
+    <Property Name="SessionID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LoginDate" Type="DateTime" Precision="3" />
+    <Property Name="AlamatIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LogXMLParsing">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NamaFileXMLLastUpdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="xmlModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Master_BentukKaroseri">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="BentukKaroseri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Master_Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdatedBy" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="DeleteStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Master_Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ParentID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MenuName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ParentIconClass" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ChildIconClass" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OrderNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Master_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="125" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RegionID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Group_VendorID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id_vendor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CountError" Type="Int32" />
+    <Property Name="ExpiredDate" Type="DateTime" Precision="3" />
+    <Property Name="NeverExpired" Type="Boolean" />
+    <Property Name="Locked" Type="Boolean" />
+    <Property Name="SessionID" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+    <Property Name="LastLogin" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdatedBy" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="DeleteStatus" Type="Boolean" />
+    <Property Name="No_Telp" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PLANTID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mgmt_Akses">
+    <Key>
+      <PropertyRef Name="GroupID" />
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="GroupID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MenuID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AllowModify" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="MSMATERIAL">
+    <Key>
+      <PropertyRef Name="MATERIALNUMBER" />
+    </Key>
+    <Property Name="MATERIALNUMBER" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALTYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALGROUP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OLDMATERIAL" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="BOMMATERIAL" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="BRAND" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MODEL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="GARDAN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="YEAR" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PURCHASEGROUPID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALIDVENDOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRICELIST" Type="Double" />
+  </EntityType>
+  <EntityType Name="MSPLANT">
+    <Key>
+      <PropertyRef Name="PLANTID" />
+    </Key>
+    <Property Name="PLANTID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="KELURAHAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KECAMATAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REGION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACTPERSONNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT4" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT5" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PROPINSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TITLECP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NOHPCP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOTELPPLANT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="POSTALCODE" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMERNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MSSTORAGELOCATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANYCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STORAGELOCATIONID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SLOCDESCRIPTION" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="PLANTID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="PLANTDESCRIPTION" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="STREET" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="POSTALCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MSVENDOR">
+    <Key>
+      <PropertyRef Name="VENDORID" />
+    </Key>
+    <Property Name="VENDORID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VENDORNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STREET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DISTRIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="POSTALCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PLANTIDTSO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="B2B" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SLUSER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NRP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JOBROLEKEY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JOBROLEDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JOBPOSITIONKEY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JOBPOSITIONDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ROLEID" Type="Int32" />
+    <Property Name="COMPANYCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SALESOFFICE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SALESGROUP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="FULLNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SIGNATUREPATH" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SMREFERENCE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="REPORTINGNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="STATUS_UPLOAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FILE_UPLOAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NO_PO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STATUS_UPLOADBPKB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FILE_UPLOAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NO_PO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STATUS_UPLOADDELIVERY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FILE_UPLOAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NO_PO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STATUS_UPLOADDETAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FILE_UPLOAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NO_PO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VENDORID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="STATUS_UPLOADREQUIREMENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FILE_UPLOAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NO_PO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STREAMLINER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesContractNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="SalesContractDate" Type="DateTime" Precision="0" />
+    <Property Name="PRDeliveryDate" Type="DateTime" Precision="0" />
+    <Property Name="RequesterName" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+    <Property Name="PRStatus" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="PRKaroseri" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PRAccessories" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ProcessVKaroseri" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ProcessVAccs" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PROMISEDLVDATEPO" Type="DateTime" Precision="0" />
+    <Property Name="PeriodePO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="OfficerName" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+    <Property Name="POStatus" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="BBN" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Merk" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="BentukAkhirUnit" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Gardan" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="EXPECTEDDATEDELIVERED" Type="DateTime" Precision="0" />
+    <Property Name="Plant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRType" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="REQUESTDELIVERYDATE" Type="DateTime" Precision="0" />
+    <Property Name="PRDATEASSIGNMENT" Type="DateTime" Precision="0" />
+    <Property Name="ItemDoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="DocType" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="VendorAccountNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MatGroup" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+    <Property Name="DocCond" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="UoM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="InfoRecord" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="CurrDisc" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CurrBBN" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CurrDPP" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="DLCPrice" Type="Double" />
+    <Property Name="CurrDLC" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CurrPPN" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="NetPrice" Type="Double" />
+    <Property Name="CurrOPT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="DocPrice" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ItemText" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine2" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine3" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine4" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine5" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine6" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine7" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine8" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine9" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine10" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="TextLine11" Type="String" MaxLength="132" FixedLength="true" Unicode="false" />
+    <Property Name="CurrNetprInfRec" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="CarDesc" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="MatDocItem" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="FiscalYear" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="matdocGI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ManSerialNumber" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="AssetNumber" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="CarRBentuk" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="DateCarRBentuk" Type="DateTime" Precision="0" />
+    <Property Name="CarFaktur" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="DateCarFaktur" Type="DateTime" Precision="0" />
+    <Property Name="CarFormA" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="DateCarFormA" Type="DateTime" Precision="0" />
+    <Property Name="CarSertif" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="DateCarSertif" Type="DateTime" Precision="0" />
+    <Property Name="CarRegUji" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="CarBPKB" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="StatusCarBPKB" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="RefKey" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PONUMBER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Customername" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SchedItem" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="SchedDelvDate" Type="DateTime" Precision="0" />
+    <Property Name="TujuanDeliveryUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Approver" Type="String" MaxLength="225" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UPLOAD_FILE">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TGLPO" Type="DateTime" Precision="3" />
+    <Property Name="KET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FILE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LASTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LASTDATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="VENDOR_GROUP">
+    <Key>
+      <PropertyRef Name="Group_VendorID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Group_VendorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Group_VendorName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Create_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Create_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMPO">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TGLPO" Type="DateTime" Precision="3" />
+    <Property Name="PRNUMBERSAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HARGAOPTIONAL" Type="Double" />
+    <Property Name="TGLKIRIMCABVENDOR" Type="DateTime" Precision="3" />
+    <Property Name="KETPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PPNOPTIONAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CABANGVENDOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESCCHANGEPO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DISC" Type="Double" />
+    <Property Name="HARGABBN" Type="Double" />
+    <Property Name="HARGADPP" Type="Double" />
+    <Property Name="HARGAPPNUNIT" Type="Double" />
+    <Property Name="MAINTYPEUNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRICELIST" Type="Double" />
+    <Property Name="PROMISEDLVDATEPO" Type="DateTime" Precision="3" />
+    <Property Name="TGLCHANGEPO" Type="DateTime" Precision="3" />
+    <Property Name="VENDORID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="VENDORNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BIAYAPENGIRIMAN" Type="Double" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BENTUKAKHIRUNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HISTORYPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TGLMASUKKAROSERI" Type="DateTime" Precision="3" />
+    <Property Name="TGLSELESAIKAROSERI" Type="DateTime" Precision="3" />
+    <Property Name="PURCHASESTATUS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="POSTATUSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ONTHEROADPRICE" Type="Double" />
+    <Property Name="EXPECTEDDATEDELIVERED" Type="DateTime" Precision="3" />
+    <Property Name="COLOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UNITDELIVERYADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTUALDATEDELIVEREDUNIT" Type="DateTime" Precision="3" />
+    <Property Name="REMARKSPOVENDOR" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKSCARROSSERIE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ACTUALRECEIVEDBPKBHOFROMBRANCH" Type="DateTime" Precision="3" />
+    <Property Name="DELIVERYCOST" Type="Double" />
+    <Property Name="CARROSERIEVENDORNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCESORIESADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="DODATE" Type="DateTime" Precision="3" />
+    <Property Name="DONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="HARGABBN_INPUT" Type="Double" />
+    <Property Name="HARGADPP_INPUT" Type="Double" />
+    <Property Name="HARGAPPNUNIT_INPUT" Type="Double" />
+    <Property Name="CARMODEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CARSERIES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANYCODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANYNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATMT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KODECABANG" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CABANGTRAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MERK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TYPEUNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VARIAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VARIAN_INPUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MERK_INPUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="POQTY" Type="Int32" />
+    <Property Name="PRSAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REASONREVISEDBYVENDOR" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="REVISEDDATE" Type="DateTime" Precision="3" />
+    <Property Name="isRevised" Type="Boolean" />
+    <Property Name="TGLGI" Type="DateTime" Precision="3" />
+    <Property Name="RefDocNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CODEGROUP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TOTALPAYMENT" Type="Decimal" Precision="17" Scale="4" />
+    <Property Name="LOCALPRICE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CURRENCY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CLIENT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FISCALYEAR" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="PROPOSALNUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APPROVALDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="flagRejection" Type="Int32" />
+    <Property Name="PICKAROSERI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="NOTELEPONKAROSERI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BENTUKKAROSERI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SHIPPINGADDRESS1" Type="String" MaxLength="132" FixedLength="false" Unicode="false" />
+    <Property Name="SHIPPINGADDRESS2" Type="String" MaxLength="132" FixedLength="false" Unicode="false" />
+    <Property Name="SHIPPINGADDRESS3" Type="String" MaxLength="132" FixedLength="false" Unicode="false" />
+    <Property Name="SHIPPINGADDRESS4" Type="String" MaxLength="132" FixedLength="false" Unicode="false" />
+    <Property Name="BBNADDRESS1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BBNADDRESS2" Type="String" MaxLength="132" FixedLength="false" Unicode="false" />
+    <Property Name="BBNADDRESS3" Type="String" MaxLength="132" FixedLength="false" Unicode="false" />
+    <Property Name="BBNADDRESS4" Type="String" MaxLength="132" FixedLength="false" Unicode="false" />
+    <Property Name="xmlModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlCreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="xmlCreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xmlStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updateqty" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="materialnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMUPDATE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NAMA_FIELD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ISI_FIELD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="MODIFIED_BY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Master_Vendor">
+    <Key>
+      <PropertyRef Name="id_vendor" />
+    </Key>
+    <Property Name="id_vendor" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nama_vendor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="alamat_vendor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telp_vendor" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="status" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+    <Property Name="LastUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="REMINDER_LOG">
+    <Key>
+      <PropertyRef Name="PONUMBER" />
+      <PropertyRef Name="POSTATUS" />
+      <PropertyRef Name="LASTMAILDATE" />
+    </Key>
+    <Property Name="PONUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="POSTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LASTMAILDATE" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="VENDORMAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VendorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="eprocEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Company_Code" EntityType="Self.Company_Code" />
+    <EntitySet Name="CUSTOM_DOWNLOAD_TRANSACTION" EntityType="Self.CUSTOM_DOWNLOAD_TRANSACTION" />
+    <EntitySet Name="CUSTOM_DOWNLOAD_TRANSACTIONDATA" EntityType="Self.CUSTOM_DOWNLOAD_TRANSACTIONDATA" />
+    <EntitySet Name="CUSTOM_DOWNLOAD_TRANSACTIONDATADETAIL" EntityType="Self.CUSTOM_DOWNLOAD_TRANSACTIONDATADETAIL" />
+    <EntitySet Name="CUSTOM_LOG" EntityType="Self.CUSTOM_LOG" />
+    <EntitySet Name="CUSTOM_S02001_HS" EntityType="Self.CUSTOM_S02001_HS" />
+    <EntitySet Name="CUSTOM_S02001_IS" EntityType="Self.CUSTOM_S02001_IS" />
+    <EntitySet Name="CUSTOM_S02001_TEMP_HS" EntityType="Self.CUSTOM_S02001_TEMP_HS" />
+    <EntitySet Name="CUSTOM_S02001_TEMP_IS" EntityType="Self.CUSTOM_S02001_TEMP_IS" />
+    <EntitySet Name="CUSTOM_S02002" EntityType="Self.CUSTOM_S02002" />
+    <EntitySet Name="CUSTOM_S02003" EntityType="Self.CUSTOM_S02003" />
+    <EntitySet Name="CUSTOM_S02003_TEMP" EntityType="Self.CUSTOM_S02003_TEMP" />
+    <EntitySet Name="CUSTOM_S02004" EntityType="Self.CUSTOM_S02004" />
+    <EntitySet Name="CUSTOM_S02005_HS" EntityType="Self.CUSTOM_S02005_HS" />
+    <EntitySet Name="CUSTOM_S02005_IS" EntityType="Self.CUSTOM_S02005_IS" />
+    <EntitySet Name="CUSTOM_S02005_TEMP_HS" EntityType="Self.CUSTOM_S02005_TEMP_HS" />
+    <EntitySet Name="CUSTOM_S02005_TEMP_IS" EntityType="Self.CUSTOM_S02005_TEMP_IS" />
+    <EntitySet Name="CUSTOM_S02006" EntityType="Self.CUSTOM_S02006" />
+    <EntitySet Name="CUSTOM_S02007" EntityType="Self.CUSTOM_S02007" />
+    <EntitySet Name="CUSTOM_S02007_TEMP" EntityType="Self.CUSTOM_S02007_TEMP" />
+    <EntitySet Name="CUSTOM_S02008" EntityType="Self.CUSTOM_S02008" />
+    <EntitySet Name="CUSTOM_S02009_HS" EntityType="Self.CUSTOM_S02009_HS" />
+    <EntitySet Name="CUSTOM_S02009_IS" EntityType="Self.CUSTOM_S02009_IS" />
+    <EntitySet Name="CUSTOM_S02009_TEMP_HS" EntityType="Self.CUSTOM_S02009_TEMP_HS" />
+    <EntitySet Name="CUSTOM_S02009_TEMP_IS" EntityType="Self.CUSTOM_S02009_TEMP_IS" />
+    <EntitySet Name="CUSTOM_TRANSACTION" EntityType="Self.CUSTOM_TRANSACTION" />
+    <EntitySet Name="CUSTOM_TRANSACTIONDATA" EntityType="Self.CUSTOM_TRANSACTIONDATA" />
+    <EntitySet Name="CUSTOM_TRANSACTIONDATADETAIL" EntityType="Self.CUSTOM_TRANSACTIONDATADETAIL" />
+    <EntitySet Name="CUSTOM_USER" EntityType="Self.CUSTOM_USER" />
+    <EntitySet Name="CUSTOM_VENDOR_TRANSACTION" EntityType="Self.CUSTOM_VENDOR_TRANSACTION" />
+    <EntitySet Name="CUSTOMBPKBs" EntityType="Self.CUSTOMBPKB" />
+    <EntitySet Name="CUSTOMCITies" EntityType="Self.CUSTOMCITY" />
+    <EntitySet Name="CUSTOMCOMPANies" EntityType="Self.CUSTOMCOMPANY" />
+    <EntitySet Name="CUSTOMFILEUPLOADs" EntityType="Self.CUSTOMFILEUPLOAD" />
+    <EntitySet Name="CUSTOMGRs" EntityType="Self.CUSTOMGR" />
+    <EntitySet Name="CUSTOMIRs" EntityType="Self.CUSTOMIR" />
+    <EntitySet Name="CUSTOMMISCs" EntityType="Self.CUSTOMMISC" />
+    <EntitySet Name="CUSTOMPRs" EntityType="Self.CUSTOMPR" />
+    <EntitySet Name="CUSTOMPROPOSALPAYMENTs" EntityType="Self.CUSTOMPROPOSALPAYMENT" />
+    <EntitySet Name="CUSTOMREGIONs" EntityType="Self.CUSTOMREGION" />
+    <EntitySet Name="CUSTOMSERATOAIs" EntityType="Self.CUSTOMSERATOAI" />
+    <EntitySet Name="CUSTOMSTATUS" EntityType="Self.CUSTOMSTATU" />
+    <EntitySet Name="Log_Aktifitas" EntityType="Self.Log_Aktifitas" />
+    <EntitySet Name="Log_Error" EntityType="Self.Log_Error" />
+    <EntitySet Name="Log_Login" EntityType="Self.Log_Login" />
+    <EntitySet Name="LogXMLParsings" EntityType="Self.LogXMLParsing" />
+    <EntitySet Name="Master_BentukKaroseri" EntityType="Self.Master_BentukKaroseri" />
+    <EntitySet Name="Master_Group" EntityType="Self.Master_Group" />
+    <EntitySet Name="Master_Menu" EntityType="Self.Master_Menu" />
+    <EntitySet Name="Master_User" EntityType="Self.Master_User" />
+    <EntitySet Name="Mgmt_Akses" EntityType="Self.Mgmt_Akses" />
+    <EntitySet Name="MSMATERIALs" EntityType="Self.MSMATERIAL" />
+    <EntitySet Name="MSPLANTs" EntityType="Self.MSPLANT" />
+    <EntitySet Name="MSSTORAGELOCATIONs" EntityType="Self.MSSTORAGELOCATION" />
+    <EntitySet Name="MSVENDORs" EntityType="Self.MSVENDOR" />
+    <EntitySet Name="SLUSERs" EntityType="Self.SLUSER" />
+    <EntitySet Name="STATUS_UPLOAD" EntityType="Self.STATUS_UPLOAD" />
+    <EntitySet Name="STATUS_UPLOADBPKB" EntityType="Self.STATUS_UPLOADBPKB" />
+    <EntitySet Name="STATUS_UPLOADDELIVERY" EntityType="Self.STATUS_UPLOADDELIVERY" />
+    <EntitySet Name="STATUS_UPLOADDETAIL" EntityType="Self.STATUS_UPLOADDETAIL" />
+    <EntitySet Name="STATUS_UPLOADREQUIREMENT" EntityType="Self.STATUS_UPLOADREQUIREMENT" />
+    <EntitySet Name="STREAMLINERs" EntityType="Self.STREAMLINER" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="UPLOAD_FILE" EntityType="Self.UPLOAD_FILE" />
+    <EntitySet Name="VENDOR_GROUP" EntityType="Self.VENDOR_GROUP" />
+    <EntitySet Name="CUSTOMPOes" EntityType="Self.CUSTOMPO" />
+    <EntitySet Name="CUSTOMUPDATEs" EntityType="Self.CUSTOMUPDATE" />
+    <EntitySet Name="Master_Vendor" EntityType="Self.Master_Vendor" />
+    <EntitySet Name="REMINDER_LOG" EntityType="Self.REMINDER_LOG" />
+    <EntitySet Name="VENDORMAILs" EntityType="Self.VENDORMAIL" />
+    <FunctionImport Name="fn_CountWeekDays" IsComposable="true" ReturnType="Collection(eprocurementModel.fn_CountWeekDays_Result)">
+      <Parameter Name="fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CancelPOSeraToAI" ReturnType="Collection(eprocurementModel.sp_CancelPOSeraToAI_Result)" />
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CreatePOSeraS02009ToAI_HS" ReturnType="Collection(eprocurementModel.sp_CreatePOSeraS02009ToAI_HS_Result)" />
+    <FunctionImport Name="sp_CreatePOSeras02009ToAI_IS" ReturnType="Collection(eprocurementModel.sp_CreatePOSeras02009ToAI_IS_Result)" />
+    <FunctionImport Name="sp_CreatePOSeraToAI_HS" ReturnType="Collection(eprocurementModel.sp_CreatePOSeraToAI_HS_Result)" />
+    <FunctionImport Name="sp_CreatePOSeraToAI_IS" ReturnType="Collection(eprocurementModel.sp_CreatePOSeraToAI_IS_Result)" />
+    <FunctionImport Name="sp_DeleteAllTempHSISS02001" />
+    <FunctionImport Name="sp_DeleteAllTempHSISS02005" />
+    <FunctionImport Name="sp_DeleteAllTempHSISS02009" />
+    <FunctionImport Name="sp_DeleteAllTempHSS02003" />
+    <FunctionImport Name="sp_DeleteAllTempHSS02007" />
+    <FunctionImport Name="sp_DeleteTempHS">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteTempHS_s02009">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteTempHSS02003">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteTempHSS02005">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteTempHSS02007">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteTempIS">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DeleteTemps02009IS">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetDataForXML" ReturnType="Collection(eprocurementModel.sp_GetDataForXML_Result)" />
+    <FunctionImport Name="sp_GetDataForXML_TEST" ReturnType="Collection(eprocurementModel.sp_GetDataForXML_TEST_Result)" />
+    <FunctionImport Name="sp_GetDataForXML_TESTING" ReturnType="Collection(eprocurementModel.sp_GetDataForXML_TESTING_Result)" />
+    <FunctionImport Name="sp_GetDataForXMLNonB2B" ReturnType="Collection(eprocurementModel.sp_GetDataForXMLNonB2B_Result)" />
+    <FunctionImport Name="sp_GetKodeCabangAI" ReturnType="Collection(String)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(eprocurementModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(eprocurementModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARSINGXML">
+      <Parameter Name="PurcDoc" Mode="In" Type="String" />
+      <Parameter Name="ItemDoc" Mode="In" Type="String" />
+      <Parameter Name="DateCreated" Mode="In" Type="DateTime" />
+      <Parameter Name="DocType" Mode="In" Type="String" />
+      <Parameter Name="PayTerm" Mode="In" Type="String" />
+      <Parameter Name="Vendor" Mode="In" Type="String" />
+      <Parameter Name="DocDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ChangeDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Material" Mode="In" Type="String" />
+      <Parameter Name="MatGroup" Mode="In" Type="String" />
+      <Parameter Name="DocCond" Mode="In" Type="String" />
+      <Parameter Name="NetPrice" Mode="In" Type="Double" />
+      <Parameter Name="Curr" Mode="In" Type="String" />
+      <Parameter Name="POQty" Mode="In" Type="Double" />
+      <Parameter Name="UoM" Mode="In" Type="String" />
+      <Parameter Name="InfoRecord" Mode="In" Type="String" />
+      <Parameter Name="PRNumber" Mode="In" Type="String" />
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="CompName" Mode="In" Type="String" />
+      <Parameter Name="Plant" Mode="In" Type="String" />
+      <Parameter Name="Text" Mode="In" Type="String" />
+      <Parameter Name="FlagDelete" Mode="In" Type="String" />
+      <Parameter Name="Name1" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="DiscPrice" Mode="In" Type="Double" />
+      <Parameter Name="CurrDisc" Mode="In" Type="String" />
+      <Parameter Name="BBNPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrBBN" Mode="In" Type="String" />
+      <Parameter Name="DPPPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrDPP" Mode="In" Type="String" />
+      <Parameter Name="DLCPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrDLC" Mode="In" Type="String" />
+      <Parameter Name="PPNPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrPPN" Mode="In" Type="String" />
+      <Parameter Name="OPTPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrOPT" Mode="In" Type="String" />
+      <Parameter Name="Totalpayment" Mode="In" Type="Decimal" />
+      <Parameter Name="Localprice" Mode="In" Type="Decimal" />
+      <Parameter Name="Currency" Mode="In" Type="String" />
+      <Parameter Name="ItemText" Mode="In" Type="String" />
+      <Parameter Name="TextLine" Mode="In" Type="String" />
+      <Parameter Name="TextLine2" Mode="In" Type="String" />
+      <Parameter Name="TextLine3" Mode="In" Type="String" />
+      <Parameter Name="TextLine4" Mode="In" Type="String" />
+      <Parameter Name="TextLine5" Mode="In" Type="String" />
+      <Parameter Name="TextLine6" Mode="In" Type="String" />
+      <Parameter Name="TextLine7" Mode="In" Type="String" />
+      <Parameter Name="TextLine8" Mode="In" Type="String" />
+      <Parameter Name="TextLine9" Mode="In" Type="String" />
+      <Parameter Name="TextLine10" Mode="In" Type="String" />
+      <Parameter Name="TextLine11" Mode="In" Type="String" />
+      <Parameter Name="PRRelDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="ItemDelvDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ItemDelvDate2" Mode="In" Type="DateTime" />
+      <Parameter Name="NetprPurcInfoRec" Mode="In" Type="String" />
+      <Parameter Name="CurrNetprInfRec" Mode="In" Type="String" />
+      <Parameter Name="CarDesc" Mode="In" Type="String" />
+      <Parameter Name="CarModel" Mode="In" Type="String" />
+      <Parameter Name="CarType" Mode="In" Type="String" />
+      <Parameter Name="CarBrand" Mode="In" Type="String" />
+      <Parameter Name="CarTransmisi" Mode="In" Type="String" />
+      <Parameter Name="CarSeries" Mode="In" Type="String" />
+      <Parameter Name="CarYear" Mode="In" Type="String" />
+      <Parameter Name="MatDoc" Mode="In" Type="String" />
+      <Parameter Name="MatDocYear" Mode="In" Type="String" />
+      <Parameter Name="MatDocItem" Mode="In" Type="Decimal" />
+      <Parameter Name="PostDateDoc" Mode="In" Type="DateTime" />
+      <Parameter Name="PostDateDocBPKB" Mode="In" Type="DateTime" />
+      <Parameter Name="AccDocNumber" Mode="In" Type="String" />
+      <Parameter Name="FiscalYear" Mode="In" Type="String" />
+      <Parameter Name="ClearingDocNumber" Mode="In" Type="String" />
+      <Parameter Name="ClearingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="MatDocGI" Mode="In" Type="String" />
+      <Parameter Name="EquipmentNumb" Mode="In" Type="String" />
+      <Parameter Name="BatchNumber" Mode="In" Type="String" />
+      <Parameter Name="SerialNumber" Mode="In" Type="String" />
+      <Parameter Name="ManSerialNumber" Mode="In" Type="String" />
+      <Parameter Name="ModelNumber" Mode="In" Type="String" />
+      <Parameter Name="DateRecordCreated" Mode="In" Type="DateTime" />
+      <Parameter Name="AssetNumber" Mode="In" Type="String" />
+      <Parameter Name="CarSTNK" Mode="In" Type="DateTime" />
+      <Parameter Name="CarRBentuk" Mode="In" Type="String" />
+      <Parameter Name="DateCarRBentuk" Mode="In" Type="DateTime" />
+      <Parameter Name="CarFaktur" Mode="In" Type="String" />
+      <Parameter Name="DateCarFaktur" Mode="In" Type="DateTime" />
+      <Parameter Name="CarFormA" Mode="In" Type="String" />
+      <Parameter Name="DateCarFormA" Mode="In" Type="DateTime" />
+      <Parameter Name="CarSertif" Mode="In" Type="String" />
+      <Parameter Name="DateCarSertif" Mode="In" Type="DateTime" />
+      <Parameter Name="CarRegUji" Mode="In" Type="String" />
+      <Parameter Name="CarBPKB" Mode="In" Type="String" />
+      <Parameter Name="StatusCarBPKB" Mode="In" Type="String" />
+      <Parameter Name="RefDocNo" Mode="In" Type="String" />
+      <Parameter Name="RefKey" Mode="In" Type="String" />
+      <Parameter Name="PRSAP" Mode="In" Type="String" />
+      <Parameter Name="PRDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PRDeliveryDate" Mode="In" Type="DateTime" />
+      <Parameter Name="RequesterName" Mode="In" Type="String" />
+      <Parameter Name="PRStatus" Mode="In" Type="String" />
+      <Parameter Name="PRKaroseri" Mode="In" Type="String" />
+      <Parameter Name="PRAccessories" Mode="In" Type="String" />
+      <Parameter Name="ProcessVKaroseri" Mode="In" Type="String" />
+      <Parameter Name="ProcessVAccs" Mode="In" Type="String" />
+      <Parameter Name="Customer" Mode="In" Type="String" />
+      <Parameter Name="OntheRoadPrice" Mode="In" Type="Double" />
+      <Parameter Name="PromiseDeiveryDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PeriodePO" Mode="In" Type="String" />
+      <Parameter Name="OfficerName" Mode="In" Type="String" />
+      <Parameter Name="UnitDeliveryAddress" Mode="In" Type="String" />
+      <Parameter Name="POStatus" Mode="In" Type="String" />
+      <Parameter Name="SchedItem" Mode="In" Type="Decimal" />
+      <Parameter Name="SchedDelvDate" Mode="In" Type="DateTime" />
+      <Parameter Name="BBN" Mode="In" Type="String" />
+      <Parameter Name="merk" Mode="In" Type="String" />
+      <Parameter Name="color" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="String" />
+      <Parameter Name="BentukAkhirUnit" Mode="In" Type="String" />
+      <Parameter Name="Gardan" Mode="In" Type="String" />
+      <Parameter Name="salescontractNo" Mode="In" Type="String" />
+      <Parameter Name="Salescontractdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Customername" Mode="In" Type="String" />
+      <Parameter Name="tglpromisedeliverybpkb" Mode="In" Type="String" />
+      <Parameter Name="TextLine12" Mode="In" Type="String" />
+      <Parameter Name="QCApps" Mode="In" Type="String" />
+      <Parameter Name="NamaFileXLMLastUpdate" Mode="In" Type="String" />
+      <Parameter Name="StatusLog" Mode="In" Type="String" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARSINGXML_BAK">
+      <Parameter Name="PurcDoc" Mode="In" Type="String" />
+      <Parameter Name="ItemDoc" Mode="In" Type="String" />
+      <Parameter Name="DateCreated" Mode="In" Type="DateTime" />
+      <Parameter Name="DocType" Mode="In" Type="String" />
+      <Parameter Name="PayTerm" Mode="In" Type="String" />
+      <Parameter Name="Vendor" Mode="In" Type="String" />
+      <Parameter Name="DocDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ChangeDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Material" Mode="In" Type="String" />
+      <Parameter Name="MatGroup" Mode="In" Type="String" />
+      <Parameter Name="DocCond" Mode="In" Type="String" />
+      <Parameter Name="NetPrice" Mode="In" Type="Double" />
+      <Parameter Name="Curr" Mode="In" Type="String" />
+      <Parameter Name="POQty" Mode="In" Type="Double" />
+      <Parameter Name="UoM" Mode="In" Type="String" />
+      <Parameter Name="InfoRecord" Mode="In" Type="String" />
+      <Parameter Name="PRNumber" Mode="In" Type="String" />
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="CompName" Mode="In" Type="String" />
+      <Parameter Name="Plant" Mode="In" Type="String" />
+      <Parameter Name="Text" Mode="In" Type="String" />
+      <Parameter Name="FlagDelete" Mode="In" Type="String" />
+      <Parameter Name="Name1" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="DiscPrice" Mode="In" Type="Double" />
+      <Parameter Name="CurrDisc" Mode="In" Type="String" />
+      <Parameter Name="BBNPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrBBN" Mode="In" Type="String" />
+      <Parameter Name="DPPPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrDPP" Mode="In" Type="String" />
+      <Parameter Name="DLCPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrDLC" Mode="In" Type="String" />
+      <Parameter Name="PPNPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrPPN" Mode="In" Type="String" />
+      <Parameter Name="OPTPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrOPT" Mode="In" Type="String" />
+      <Parameter Name="Totalpayment" Mode="In" Type="Decimal" />
+      <Parameter Name="Localprice" Mode="In" Type="Decimal" />
+      <Parameter Name="Currency" Mode="In" Type="String" />
+      <Parameter Name="ItemText" Mode="In" Type="String" />
+      <Parameter Name="TextLine" Mode="In" Type="String" />
+      <Parameter Name="TextLine2" Mode="In" Type="String" />
+      <Parameter Name="TextLine3" Mode="In" Type="String" />
+      <Parameter Name="TextLine4" Mode="In" Type="String" />
+      <Parameter Name="TextLine5" Mode="In" Type="String" />
+      <Parameter Name="TextLine6" Mode="In" Type="String" />
+      <Parameter Name="TextLine7" Mode="In" Type="String" />
+      <Parameter Name="TextLine8" Mode="In" Type="String" />
+      <Parameter Name="TextLine9" Mode="In" Type="String" />
+      <Parameter Name="TextLine10" Mode="In" Type="String" />
+      <Parameter Name="TextLine11" Mode="In" Type="String" />
+      <Parameter Name="PRRelDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="ItemDelvDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ItemDelvDate2" Mode="In" Type="DateTime" />
+      <Parameter Name="NetprPurcInfoRec" Mode="In" Type="String" />
+      <Parameter Name="CurrNetprInfRec" Mode="In" Type="String" />
+      <Parameter Name="CarDesc" Mode="In" Type="String" />
+      <Parameter Name="CarModel" Mode="In" Type="String" />
+      <Parameter Name="CarType" Mode="In" Type="String" />
+      <Parameter Name="CarBrand" Mode="In" Type="String" />
+      <Parameter Name="CarTransmisi" Mode="In" Type="String" />
+      <Parameter Name="CarSeries" Mode="In" Type="String" />
+      <Parameter Name="CarYear" Mode="In" Type="String" />
+      <Parameter Name="MatDoc" Mode="In" Type="String" />
+      <Parameter Name="MatDocYear" Mode="In" Type="String" />
+      <Parameter Name="MatDocItem" Mode="In" Type="Decimal" />
+      <Parameter Name="PostDateDoc" Mode="In" Type="DateTime" />
+      <Parameter Name="PostDateDocBPKB" Mode="In" Type="DateTime" />
+      <Parameter Name="AccDocNumber" Mode="In" Type="String" />
+      <Parameter Name="FiscalYear" Mode="In" Type="String" />
+      <Parameter Name="ClearingDocNumber" Mode="In" Type="String" />
+      <Parameter Name="ClearingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="MatDocGI" Mode="In" Type="String" />
+      <Parameter Name="EquipmentNumb" Mode="In" Type="String" />
+      <Parameter Name="BatchNumber" Mode="In" Type="String" />
+      <Parameter Name="SerialNumber" Mode="In" Type="String" />
+      <Parameter Name="ManSerialNumber" Mode="In" Type="String" />
+      <Parameter Name="ModelNumber" Mode="In" Type="String" />
+      <Parameter Name="DateRecordCreated" Mode="In" Type="DateTime" />
+      <Parameter Name="AssetNumber" Mode="In" Type="String" />
+      <Parameter Name="CarSTNK" Mode="In" Type="DateTime" />
+      <Parameter Name="CarRBentuk" Mode="In" Type="String" />
+      <Parameter Name="DateCarRBentuk" Mode="In" Type="DateTime" />
+      <Parameter Name="CarFaktur" Mode="In" Type="String" />
+      <Parameter Name="DateCarFaktur" Mode="In" Type="DateTime" />
+      <Parameter Name="CarFormA" Mode="In" Type="String" />
+      <Parameter Name="DateCarFormA" Mode="In" Type="DateTime" />
+      <Parameter Name="CarSertif" Mode="In" Type="String" />
+      <Parameter Name="DateCarSertif" Mode="In" Type="DateTime" />
+      <Parameter Name="CarRegUji" Mode="In" Type="String" />
+      <Parameter Name="CarBPKB" Mode="In" Type="String" />
+      <Parameter Name="StatusCarBPKB" Mode="In" Type="String" />
+      <Parameter Name="RefDocNo" Mode="In" Type="String" />
+      <Parameter Name="RefKey" Mode="In" Type="String" />
+      <Parameter Name="PRSAP" Mode="In" Type="String" />
+      <Parameter Name="PRDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PRDeliveryDate" Mode="In" Type="DateTime" />
+      <Parameter Name="RequesterName" Mode="In" Type="String" />
+      <Parameter Name="PRStatus" Mode="In" Type="String" />
+      <Parameter Name="PRKaroseri" Mode="In" Type="String" />
+      <Parameter Name="PRAccessories" Mode="In" Type="String" />
+      <Parameter Name="ProcessVKaroseri" Mode="In" Type="String" />
+      <Parameter Name="ProcessVAccs" Mode="In" Type="String" />
+      <Parameter Name="Customer" Mode="In" Type="String" />
+      <Parameter Name="OntheRoadPrice" Mode="In" Type="Double" />
+      <Parameter Name="PromiseDeiveryDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PeriodePO" Mode="In" Type="String" />
+      <Parameter Name="OfficerName" Mode="In" Type="String" />
+      <Parameter Name="UnitDeliveryAddress" Mode="In" Type="String" />
+      <Parameter Name="POStatus" Mode="In" Type="String" />
+      <Parameter Name="SchedItem" Mode="In" Type="Decimal" />
+      <Parameter Name="SchedDelvDate" Mode="In" Type="DateTime" />
+      <Parameter Name="BBN" Mode="In" Type="String" />
+      <Parameter Name="merk" Mode="In" Type="String" />
+      <Parameter Name="color" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="String" />
+      <Parameter Name="BentukAkhirUnit" Mode="In" Type="String" />
+      <Parameter Name="Gardan" Mode="In" Type="String" />
+      <Parameter Name="salescontractNo" Mode="In" Type="String" />
+      <Parameter Name="Salescontractdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Customername" Mode="In" Type="String" />
+      <Parameter Name="tglpromisedeliverybpkb" Mode="In" Type="String" />
+      <Parameter Name="TextLine12" Mode="In" Type="String" />
+      <Parameter Name="QCApps" Mode="In" Type="String" />
+      <Parameter Name="NamaFileXLMLastUpdate" Mode="In" Type="String" />
+      <Parameter Name="StatusLog" Mode="In" Type="String" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARSINGXML1">
+      <Parameter Name="PurcDoc" Mode="In" Type="String" />
+      <Parameter Name="ItemDoc" Mode="In" Type="String" />
+      <Parameter Name="DateCreated" Mode="In" Type="DateTime" />
+      <Parameter Name="DocType" Mode="In" Type="String" />
+      <Parameter Name="PayTerm" Mode="In" Type="String" />
+      <Parameter Name="Vendor" Mode="In" Type="String" />
+      <Parameter Name="DocDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ChangeDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Material" Mode="In" Type="String" />
+      <Parameter Name="MatGroup" Mode="In" Type="String" />
+      <Parameter Name="DocCond" Mode="In" Type="String" />
+      <Parameter Name="NetPrice" Mode="In" Type="Double" />
+      <Parameter Name="Curr" Mode="In" Type="String" />
+      <Parameter Name="POQty" Mode="In" Type="Double" />
+      <Parameter Name="UoM" Mode="In" Type="String" />
+      <Parameter Name="InfoRecord" Mode="In" Type="String" />
+      <Parameter Name="PRNumber" Mode="In" Type="String" />
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="CompName" Mode="In" Type="String" />
+      <Parameter Name="Plant" Mode="In" Type="String" />
+      <Parameter Name="Text" Mode="In" Type="String" />
+      <Parameter Name="FlagDelete" Mode="In" Type="String" />
+      <Parameter Name="Name1" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="DiscPrice" Mode="In" Type="Double" />
+      <Parameter Name="CurrDisc" Mode="In" Type="String" />
+      <Parameter Name="BBNPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrBBN" Mode="In" Type="String" />
+      <Parameter Name="DPPPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrDPP" Mode="In" Type="String" />
+      <Parameter Name="DLCPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrDLC" Mode="In" Type="String" />
+      <Parameter Name="PPNPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrPPN" Mode="In" Type="String" />
+      <Parameter Name="OPTPrice" Mode="In" Type="String" />
+      <Parameter Name="CurrOPT" Mode="In" Type="String" />
+      <Parameter Name="Totalpayment" Mode="In" Type="Decimal" />
+      <Parameter Name="Localprice" Mode="In" Type="Decimal" />
+      <Parameter Name="Currency" Mode="In" Type="String" />
+      <Parameter Name="ItemText" Mode="In" Type="String" />
+      <Parameter Name="TextLine" Mode="In" Type="String" />
+      <Parameter Name="TextLine2" Mode="In" Type="String" />
+      <Parameter Name="TextLine3" Mode="In" Type="String" />
+      <Parameter Name="TextLine4" Mode="In" Type="String" />
+      <Parameter Name="TextLine5" Mode="In" Type="String" />
+      <Parameter Name="TextLine6" Mode="In" Type="String" />
+      <Parameter Name="TextLine7" Mode="In" Type="String" />
+      <Parameter Name="TextLine8" Mode="In" Type="String" />
+      <Parameter Name="TextLine9" Mode="In" Type="String" />
+      <Parameter Name="TextLine10" Mode="In" Type="String" />
+      <Parameter Name="TextLine11" Mode="In" Type="String" />
+      <Parameter Name="PRRelDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="ItemDelvDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ItemDelvDate2" Mode="In" Type="DateTime" />
+      <Parameter Name="NetprPurcInfoRec" Mode="In" Type="String" />
+      <Parameter Name="CurrNetprInfRec" Mode="In" Type="String" />
+      <Parameter Name="CarDesc" Mode="In" Type="String" />
+      <Parameter Name="CarModel" Mode="In" Type="String" />
+      <Parameter Name="CarType" Mode="In" Type="String" />
+      <Parameter Name="CarBrand" Mode="In" Type="String" />
+      <Parameter Name="CarTransmisi" Mode="In" Type="String" />
+      <Parameter Name="CarSeries" Mode="In" Type="String" />
+      <Parameter Name="CarYear" Mode="In" Type="String" />
+      <Parameter Name="MatDoc" Mode="In" Type="String" />
+      <Parameter Name="MatDocYear" Mode="In" Type="String" />
+      <Parameter Name="MatDocItem" Mode="In" Type="Decimal" />
+      <Parameter Name="PostDateDoc" Mode="In" Type="DateTime" />
+      <Parameter Name="PostDateDocBPKB" Mode="In" Type="DateTime" />
+      <Parameter Name="AccDocNumber" Mode="In" Type="String" />
+      <Parameter Name="FiscalYear" Mode="In" Type="String" />
+      <Parameter Name="ClearingDocNumber" Mode="In" Type="String" />
+      <Parameter Name="ClearingDate" Mode="In" Type="DateTime" />
+      <Parameter Name="MatDocGI" Mode="In" Type="String" />
+      <Parameter Name="EquipmentNumb" Mode="In" Type="String" />
+      <Parameter Name="BatchNumber" Mode="In" Type="String" />
+      <Parameter Name="SerialNumber" Mode="In" Type="String" />
+      <Parameter Name="ManSerialNumber" Mode="In" Type="String" />
+      <Parameter Name="ModelNumber" Mode="In" Type="String" />
+      <Parameter Name="DateRecordCreated" Mode="In" Type="DateTime" />
+      <Parameter Name="AssetNumber" Mode="In" Type="String" />
+      <Parameter Name="CarSTNK" Mode="In" Type="DateTime" />
+      <Parameter Name="CarRBentuk" Mode="In" Type="String" />
+      <Parameter Name="DateCarRBentuk" Mode="In" Type="DateTime" />
+      <Parameter Name="CarFaktur" Mode="In" Type="String" />
+      <Parameter Name="DateCarFaktur" Mode="In" Type="DateTime" />
+      <Parameter Name="CarFormA" Mode="In" Type="String" />
+      <Parameter Name="DateCarFormA" Mode="In" Type="DateTime" />
+      <Parameter Name="CarSertif" Mode="In" Type="String" />
+      <Parameter Name="DateCarSertif" Mode="In" Type="DateTime" />
+      <Parameter Name="CarRegUji" Mode="In" Type="String" />
+      <Parameter Name="CarBPKB" Mode="In" Type="String" />
+      <Parameter Name="StatusCarBPKB" Mode="In" Type="String" />
+      <Parameter Name="RefDocNo" Mode="In" Type="String" />
+      <Parameter Name="RefKey" Mode="In" Type="String" />
+      <Parameter Name="PRSAP" Mode="In" Type="String" />
+      <Parameter Name="PRDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PRDeliveryDate" Mode="In" Type="DateTime" />
+      <Parameter Name="RequesterName" Mode="In" Type="String" />
+      <Parameter Name="PRStatus" Mode="In" Type="String" />
+      <Parameter Name="PRKaroseri" Mode="In" Type="String" />
+      <Parameter Name="PRAccessories" Mode="In" Type="String" />
+      <Parameter Name="ProcessVKaroseri" Mode="In" Type="String" />
+      <Parameter Name="ProcessVAccs" Mode="In" Type="String" />
+      <Parameter Name="Customer" Mode="In" Type="String" />
+      <Parameter Name="OntheRoadPrice" Mode="In" Type="Double" />
+      <Parameter Name="PromiseDeiveryDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PeriodePO" Mode="In" Type="String" />
+      <Parameter Name="OfficerName" Mode="In" Type="String" />
+      <Parameter Name="UnitDeliveryAddress" Mode="In" Type="String" />
+      <Parameter Name="POStatus" Mode="In" Type="String" />
+      <Parameter Name="SchedItem" Mode="In" Type="Decimal" />
+      <Parameter Name="SchedDelvDate" Mode="In" Type="DateTime" />
+      <Parameter Name="BBN" Mode="In" Type="String" />
+      <Parameter Name="merk" Mode="In" Type="String" />
+      <Parameter Name="color" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="String" />
+      <Parameter Name="BentukAkhirUnit" Mode="In" Type="String" />
+      <Parameter Name="Gardan" Mode="In" Type="String" />
+      <Parameter Name="salescontractNo" Mode="In" Type="String" />
+      <Parameter Name="Salescontractdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Customername" Mode="In" Type="String" />
+      <Parameter Name="tglpromisedeliverybpkb" Mode="In" Type="String" />
+      <Parameter Name="TextLine12" Mode="In" Type="String" />
+      <Parameter Name="QCApps" Mode="In" Type="String" />
+      <Parameter Name="NamaFileXLMLastUpdate" Mode="In" Type="String" />
+      <Parameter Name="StatusLog" Mode="In" Type="String" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARSINGXMLMASTERMATERIAL">
+      <Parameter Name="MaterialNumber" Mode="In" Type="String" />
+      <Parameter Name="Desc" Mode="In" Type="String" />
+      <Parameter Name="MaterialType" Mode="In" Type="String" />
+      <Parameter Name="MaterialGroup" Mode="In" Type="String" />
+      <Parameter Name="OldMaterial" Mode="In" Type="String" />
+      <Parameter Name="BomMaterial" Mode="In" Type="String" />
+      <Parameter Name="Brand" Mode="In" Type="String" />
+      <Parameter Name="Model" Mode="In" Type="String" />
+      <Parameter Name="Gardan" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="String" />
+      <Parameter Name="PurchaseGroup" Mode="In" Type="String" />
+      <Parameter Name="StatusLog" Mode="In" Type="String" />
+      <Parameter Name="NamaFileXLMLastUpdate" Mode="In" Type="String" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARSINGXMLMASTERPLANT">
+      <Parameter Name="PlantID" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Alamat" Mode="In" Type="String" />
+      <Parameter Name="kelurahan" Mode="In" Type="String" />
+      <Parameter Name="kecamatan" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="Region" Mode="In" Type="String" />
+      <Parameter Name="PostalCode" Mode="In" Type="String" />
+      <Parameter Name="StatusLog" Mode="In" Type="String" />
+      <Parameter Name="NamaFileXLMLastUpdate" Mode="In" Type="String" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARSINGXMLMASTERVENDOR">
+      <Parameter Name="VendorID" Mode="In" Type="String" />
+      <Parameter Name="VendorName" Mode="In" Type="String" />
+      <Parameter Name="Street" Mode="In" Type="String" />
+      <Parameter Name="Distric" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="PostalCode" Mode="In" Type="String" />
+      <Parameter Name="Telephone" Mode="In" Type="String" />
+      <Parameter Name="StatusLog" Mode="In" Type="String" />
+      <Parameter Name="NamaFileXLMLastUpdate" Mode="In" Type="String" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_PaymentSeraToAI_HS" ReturnType="Collection(eprocurementModel.sp_PaymentSeraToAI_HS_Result)" />
+    <FunctionImport Name="sp_PaymentSeraToAI_IS" ReturnType="Collection(eprocurementModel.sp_PaymentSeraToAI_IS_Result)" />
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_SendActualReceiptInvoice" ReturnType="Collection(eprocurementModel.sp_SendActualReceiptInvoice_Result)" />
+    <FunctionImport Name="sp_UpdateCustomPOStatusPOId" ReturnType="Collection(Int32)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+      <Parameter Name="POSTATUSID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateDataForXml" ReturnType="Collection(Int32)">
+      <Parameter Name="pono" Mode="In" Type="String" />
+      <Parameter Name="dataVersionS02002" Mode="In" Type="Decimal" />
+      <Parameter Name="downloadDateS02006" Mode="In" Type="DateTime" />
+      <Parameter Name="xmlStatusIr" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateS02002" ReturnType="Collection(Int32)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+      <Parameter Name="HARGADPP_INPUT" Mode="In" Type="Double" />
+      <Parameter Name="HARGAPPNUNIT_INPUT" Mode="In" Type="Double" />
+      <Parameter Name="HARGABBN_INPUT" Mode="In" Type="Double" />
+      <Parameter Name="DONUMBER" Mode="In" Type="String" />
+      <Parameter Name="DODATE" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTUALDATEDELIVEREDUNIT" Mode="In" Type="DateTime" />
+      <Parameter Name="NOCHASIS_INPUT" Mode="In" Type="String" />
+      <Parameter Name="NOENGINE_INPUT" Mode="In" Type="String" />
+      <Parameter Name="NOFAKTUR" Mode="In" Type="String" />
+      <Parameter Name="TGLFAKTUR" Mode="In" Type="DateTime" />
+      <Parameter Name="NOPOLISI_INPUT" Mode="In" Type="String" />
+      <Parameter Name="TGLSTNK_INPUT" Mode="In" Type="DateTime" />
+      <Parameter Name="NOSERTIFIKAT" Mode="In" Type="String" />
+      <Parameter Name="TGLSERTIFIKAT" Mode="In" Type="DateTime" />
+      <Parameter Name="NOFORMULIRA" Mode="In" Type="String" />
+      <Parameter Name="TGLFORMULIRA" Mode="In" Type="DateTime" />
+      <Parameter Name="NOSERTIFIKATREGUJITIPE" Mode="In" Type="String" />
+      <Parameter Name="DATEDELIVERYTOBRANCHORVENDOR" Mode="In" Type="DateTime" />
+      <Parameter Name="NOBPKB" Mode="In" Type="String" />
+      <Parameter Name="KETBPKB" Mode="In" Type="String" />
+      <Parameter Name="REVISEDATE" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateS02002_HS" ReturnType="Collection(Int32)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+      <Parameter Name="VERSIONPOSERA" Mode="In" Type="Int32" />
+      <Parameter Name="DATAVERSION" Mode="In" Type="Int32" />
+      <Parameter Name="STATUSPOSERA" Mode="In" Type="String" />
+      <Parameter Name="REJECTREVISEDPOSERA" Mode="In" Type="String" />
+      <Parameter Name="DOCUMENTNO" Mode="In" Type="String" />
+      <Parameter Name="AIMATERIALNUMBER" Mode="In" Type="String" />
+      <Parameter Name="SERAMATERIALNUMBER" Mode="In" Type="String" />
+      <Parameter Name="SERAMATERIALDESCRIPTION" Mode="In" Type="String" />
+      <Parameter Name="AICOLOR" Mode="In" Type="String" />
+      <Parameter Name="SERACOLOR" Mode="In" Type="String" />
+      <Parameter Name="QUOTATIONNO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateS02002_IS" ReturnType="Collection(Int32)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+      <Parameter Name="HARGADPP_INPUT" Mode="In" Type="Double" />
+      <Parameter Name="HARGAPPNUNIT_INPUT" Mode="In" Type="Double" />
+      <Parameter Name="HARGABBN_INPUT" Mode="In" Type="Double" />
+      <Parameter Name="DONUMBER" Mode="In" Type="String" />
+      <Parameter Name="DODATE" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTUALDATEDELIVEREDUNIT" Mode="In" Type="DateTime" />
+      <Parameter Name="NOCHASIS_INPUT" Mode="In" Type="String" />
+      <Parameter Name="NOENGINE_INPUT" Mode="In" Type="String" />
+      <Parameter Name="NOFAKTUR" Mode="In" Type="String" />
+      <Parameter Name="TGLFAKTUR" Mode="In" Type="DateTime" />
+      <Parameter Name="NOPOLISI_INPUT" Mode="In" Type="String" />
+      <Parameter Name="TGLSTNK_INPUT" Mode="In" Type="DateTime" />
+      <Parameter Name="NOSERTIFIKAT" Mode="In" Type="String" />
+      <Parameter Name="TGLSERTIFIKAT" Mode="In" Type="DateTime" />
+      <Parameter Name="NOFORMULIRA" Mode="In" Type="String" />
+      <Parameter Name="TGLFORMULIRA" Mode="In" Type="DateTime" />
+      <Parameter Name="NOSERTIFIKATREGUJITIPE" Mode="In" Type="String" />
+      <Parameter Name="DATEDELIVERYTOBRANCHORVENDOR" Mode="In" Type="DateTime" />
+      <Parameter Name="NOBPKB" Mode="In" Type="String" />
+      <Parameter Name="KETBPKB" Mode="In" Type="String" />
+      <Parameter Name="REVISEDATE" Mode="In" Type="DateTime" />
+      <Parameter Name="SALESORDERNO" Mode="In" Type="String" />
+      <Parameter Name="SALESORDERSTATUS" Mode="In" Type="Boolean" />
+      <Parameter Name="CURRENCY" Mode="In" Type="String" />
+      <Parameter Name="YEAR" Mode="In" Type="Int32" />
+      <Parameter Name="BILLINGSTATUS" Mode="In" Type="Boolean" />
+      <Parameter Name="BSTKBNO" Mode="In" Type="String" />
+      <Parameter Name="REVISISTNK" Mode="In" Type="DateTime" />
+      <Parameter Name="NAMAPENERIMA" Mode="In" Type="String" />
+      <Parameter Name="ALAMATPENERIMA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateS02004" ReturnType="Collection(Int32)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+      <Parameter Name="VERSIONPOSERA" Mode="In" Type="Decimal" />
+      <Parameter Name="DATAVERSION" Mode="In" Type="Decimal" />
+      <Parameter Name="STATUS" Mode="In" Type="String" />
+      <Parameter Name="REASONREJECTION" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateS02006" ReturnType="Collection(Int32)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+      <Parameter Name="NOFAKTUR" Mode="In" Type="String" />
+      <Parameter Name="INVNO" Mode="In" Type="String" />
+      <Parameter Name="INVDATE" Mode="In" Type="DateTime" />
+      <Parameter Name="NOFAKTURPAJAK" Mode="In" Type="String" />
+      <Parameter Name="NOCHASIS_INPUT" Mode="In" Type="String" />
+      <Parameter Name="NETPRICE" Mode="In" Type="Decimal" />
+      <Parameter Name="BUSINESSAREACODE" Mode="In" Type="String" />
+      <Parameter Name="CUSTOMERNO" Mode="In" Type="String" />
+      <Parameter Name="NOMORSPES" Mode="In" Type="String" />
+      <Parameter Name="SALESORDERNO" Mode="In" Type="String" />
+      <Parameter Name="SALESMANNUMBER" Mode="In" Type="String" />
+      <Parameter Name="VERSIONPOSERA" Mode="In" Type="Int32" />
+      <Parameter Name="KUITANSINOREF" Mode="In" Type="String" />
+      <Parameter Name="KUITANSIDATEREF" Mode="In" Type="DateTime" />
+      <Parameter Name="DOWNLOADDATE" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateS02008" ReturnType="Collection(Int32)">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+      <Parameter Name="VERSIONPOSERA" Mode="In" Type="Int32" />
+      <Parameter Name="DATAVERSION" Mode="In" Type="Int32" />
+      <Parameter Name="SALESORDERNO" Mode="In" Type="String" />
+      <Parameter Name="NOCHASIS_INPUT" Mode="In" Type="String" />
+      <Parameter Name="TGLMASUKKAROSERI" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="spCheckProposalHS" />
+    <FunctionImport Name="spCheckProposalIS" />
+    <FunctionImport Name="spCheckTempTableParsing" />
+    <FunctionImport Name="spGetVendorB2b" ReturnType="Collection(eprocurementModel.spGetVendorB2b_Result)">
+      <Parameter Name="userId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spMergepayment">
+      <Parameter Name="data" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spParsingXmlPaymentByMerge">
+      <Parameter Name="data" Mode="In" Type="String" />
+      <Parameter Name="Client" Mode="In" Type="String" />
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="fiscalYear" Mode="In" Type="String" />
+      <Parameter Name="ProposalNumber" Mode="In" Type="String" />
+      <Parameter Name="DocumentNumber" Mode="In" Type="String" />
+      <Parameter Name="PurchaseDocument" Mode="In" Type="String" />
+      <Parameter Name="Item" Mode="In" Type="String" />
+      <Parameter Name="appvDateTime" Mode="In" Type="DateTime" />
+      <Parameter Name="ApproveDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ApproveTime" Mode="In" Type="Time" />
+      <Parameter Name="NamaFileXLMLastUpdate" Mode="In" Type="String" />
+      <Parameter Name="StatusLog" Mode="In" Type="String" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateFlagRejectionByS02005">
+      <Parameter Name="PONUMBER" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_CancelPOSeraToAI_Result">
+    <Property Type="String" Name="PONumber" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="VersionPOSera" Nullable="true" />
+    <Property Type="Int32" Name="DataVersion" Nullable="true" />
+    <Property Type="String" Name="KodeCabangAI" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="ReasonRejection" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CompanyCodeAI" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="sp_CreatePOSeraS02009ToAI_HS_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="TransactionDataID" Nullable="true" />
+    <Property Type="String" Name="PONumber" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="VersionPOSERA" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="DataVersion" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="CompanyCodeAI" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="KodeCabangAI" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="dibuatOleh" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="dibuatTanggal" Nullable="true" Precision="23" />
+    <Property Type="String" Name="diubahOleh" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="diubahTanggal" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_CreatePOSeras02009ToAI_IS_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="TransactionDataID" Nullable="true" />
+    <Property Type="String" Name="PONumber" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="VersionPOSERA" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="DataVersionAI" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="ChassisNumberByVendor" Nullable="true" MaxLength="18" />
+    <Property Type="DateTime" Name="TGLGRSAP" Nullable="true" Precision="23" />
+    <Property Type="String" Name="dibuatOleh" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="dibuatTanggal" Nullable="true" Precision="23" />
+    <Property Type="String" Name="diubahOleh" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="diubahTanggal" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_CreatePOSeraToAI_HS_Result">
+    <Property Type="String" Name="PONumber" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="PODate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Version" Nullable="true" Precision="3" Scale="0" />
+    <Property Type="String" Name="CustomerNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="KodeCabangAI" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="MaterialNumberSERA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaterialDescriptionSERA" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="MaterialNumberAI" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="ColorDescSERA" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="NamaKaroseri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AlamatKaroseri" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PIC" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="NoTelepon" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="BentukKaroseri" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="InfoPromiseDelivery" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CustomerSTNKName" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="Title" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="KTPTDP" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PostalCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="PartnerName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="PartnerAddress" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Telepon" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="RegionCode" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PartnerPostalCode" Nullable="true" MaxLength="10" />
+    <Property Type="Double" Name="Diskon" Nullable="true" />
+    <Property Type="Double" Name="Pricing" Nullable="true" />
+    <Property Type="String" Name="CurrencyCode" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CompanyCodeAI" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Address2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Address3" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Address4" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Address5" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="sp_CreatePOSeraToAI_IS_Result">
+    <Property Type="String" Name="PONumber" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="PODate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="DataVersion" Nullable="true" />
+    <Property Type="String" Name="AccessoriesNumberAI" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="AccessoriesNumberSERA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AccessoriesDescriptionSERA" Nullable="true" MaxLength="40" />
+    <Property Type="Decimal" Name="QtyAccessories" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="String" Name="CompanyCodeAI" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="sp_GetDataForXML_Result">
+    <Property Type="Int64" Name="version" Nullable="true" />
+    <Property Type="Int64" Name="version2" Nullable="true" />
+    <Property Type="DateTime" Name="TGLPO" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PONumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PONumber2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ChassisNumberByVendor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ChassisNumberByVendor2" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="MachineNumberByVendor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MachineNumberByVendor2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="FactureDONumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FactureDONumber2" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="xmlStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatus2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="XmlStatusDoNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDate2" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate2" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="DataVersion" Nullable="true" Precision="3" Scale="0" />
+    <Property Type="Decimal" Name="DataVersion2" Nullable="true" Precision="3" Scale="0" />
+    <Property Type="String" Name="COMPANYCODE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ITEM" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KODECABANG" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VENDORID" Nullable="true" MaxLength="10" />
+    <Property Type="Int64" Name="version3" Nullable="true" />
+    <Property Type="Int64" Name="version4" Nullable="true" />
+    <Property Type="String" Name="PONumberSERA3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PONumberSERA4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KuitansiNo3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KuitansiNo4" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="BillingNo3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingNo4" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="NomorFakturPajak3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NomorFakturPajak4" Nullable="true" MaxLength="21" />
+    <Property Type="DateTime" Name="DownloadDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DownloadDate4" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatus3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatus4" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDate4" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate4" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ACTUALRECEIVEDINV" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusIr" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateIr" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateIr" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusInvNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatusByEngine" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateInvNo" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateInvNo" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateFaktur" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDateFaktur" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusgr" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDategr" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDategr" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusEngine" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateEngine" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateEngine" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_GetDataForXML_TEST_Result">
+    <Property Type="Int64" Name="version" Nullable="true" />
+    <Property Type="Int64" Name="version2" Nullable="true" />
+    <Property Type="DateTime" Name="TGLPO" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PONumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PONumber2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ChassisNumberByVendor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ChassisNumberByVendor2" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="MachineNumberByVendor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MachineNumberByVendor2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="FactureDONumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FactureDONumber2" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="xmlStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatus2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="XmlStatusDoNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDate2" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate2" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="DataVersion" Nullable="true" Precision="3" Scale="0" />
+    <Property Type="Decimal" Name="DataVersion2" Nullable="true" Precision="3" Scale="0" />
+    <Property Type="String" Name="COMPANYCODE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ITEM" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KODECABANG" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VENDORID" Nullable="true" MaxLength="10" />
+    <Property Type="Int64" Name="version3" Nullable="true" />
+    <Property Type="Int64" Name="version4" Nullable="true" />
+    <Property Type="String" Name="PONumberSERA3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PONumberSERA4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KuitansiNo3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KuitansiNo4" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="BillingNo3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingNo4" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="NomorFakturPajak3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NomorFakturPajak4" Nullable="true" MaxLength="21" />
+    <Property Type="DateTime" Name="DownloadDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DownloadDate4" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatus3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatus4" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDate4" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate4" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ACTUALRECEIVEDINV" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusIr" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateIr" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateIr" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusInvNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatusByEngine" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateInvNo" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateInvNo" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateFaktur" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDateFaktur" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusgr" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDategr" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDategr" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusEngine" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateEngine" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateEngine" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_GetDataForXML_TESTING_Result">
+    <Property Type="Int64" Name="version" Nullable="true" />
+    <Property Type="Int64" Name="version2" Nullable="true" />
+    <Property Type="DateTime" Name="TGLPO" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PONumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PONumber2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ChassisNumberByVendor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ChassisNumberByVendor2" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="MachineNumberByVendor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MachineNumberByVendor2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="FactureDONumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FactureDONumber2" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="xmlStatus" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatus2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="XmlStatusDoNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDate2" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate2" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="DataVersion" Nullable="true" Precision="3" Scale="0" />
+    <Property Type="Decimal" Name="DataVersion2" Nullable="true" Precision="3" Scale="0" />
+    <Property Type="String" Name="COMPANYCODE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ITEM" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KODECABANG" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VENDORID" Nullable="true" MaxLength="10" />
+    <Property Type="Int64" Name="version3" Nullable="true" />
+    <Property Type="Int64" Name="version4" Nullable="true" />
+    <Property Type="String" Name="PONumberSERA3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PONumberSERA4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KuitansiNo3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KuitansiNo4" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="BillingNo3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BillingNo4" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="NomorFakturPajak3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NomorFakturPajak4" Nullable="true" MaxLength="21" />
+    <Property Type="DateTime" Name="DownloadDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DownloadDate4" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatus3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatus4" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDate4" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate3" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDate4" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ACTUALRECEIVEDINV" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusIr" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateIr" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateIr" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusInvNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="xmlStatusByEngine" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateInvNo" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateInvNo" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateFaktur" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlCreatedDateFaktur" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusgr" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDategr" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDategr" Nullable="true" Precision="23" />
+    <Property Type="String" Name="xmlStatusEngine" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="xmlCreatedDateEngine" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="xmlModifiedDateEngine" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_GetDataForXMLNonB2B_Result">
+    <Property Type="String" Name="ponumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COMPANYCODE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ITEM" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="KODECABANG" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VENDORID" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="NOCHASIS_INPUT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NOENGINE_INPUT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DONUMBER" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="INVNO" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ACTUALRECEIVEDINV" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NOFAKTURPAJAK" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_PaymentSeraToAI_HS_Result">
+    <Property Type="String" Name="GroupingCode" Nullable="false" MaxLength="18" />
+    <Property Type="DateTime" Name="PaymentDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="TotalPayment" Nullable="true" Precision="17" Scale="4" />
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="String" Name="CompanyCodeAI" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_PaymentSeraToAI_IS_Result">
+    <Property Type="String" Name="GroupingCode" Nullable="false" MaxLength="18" />
+    <Property Type="DateTime" Name="paymentDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="String" Name="BillingNo" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="KuitansiNo" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="CurrencyCode" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="BusinessAreaCode" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CustomerNo" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="SpesNumber" Nullable="true" MaxLength="35" />
+    <Property Type="String" Name="SONumber" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Salesman" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ChasisNumber" Nullable="true" MaxLength="18" />
+    <Property Type="String" Name="PONumberSERA" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="VersionPOSERA" Nullable="true" />
+    <Property Type="Decimal" Name="PaymentAmountDC" Nullable="true" Precision="17" Scale="4" />
+    <Property Type="Decimal" Name="PaymentAmountLC" Nullable="true" Precision="17" Scale="4" />
+    <Property Type="String" Name="flags" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CompanyCodeAI" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_SendActualReceiptInvoice_Result">
+    <Property Type="String" Name="PONUMBER" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="VERSIONPOSERA" Nullable="true" />
+    <Property Type="String" Name="BILLINGNO" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="INVOICERECEIPTDATE" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="DATAVERSION" Nullable="true" />
+    <Property Type="String" Name="CompanyCodeAI" Nullable="true" MaxLength="5" />
+    <Property Type="DateTime" Name="payPlan" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spGetVendorB2b_Result">
+    <Property Type="String" Name="VENDORID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="VENDORNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="STREET" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DISTRIC" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CITY" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="POSTALCODE" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TELEPHONE" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="EMAIL" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PLANTIDTSO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL5" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL6" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL7" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL8" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="B2B" Nullable="true" MaxLength="1" />
+  </ComplexType>
+</Schema>
